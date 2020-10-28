@@ -1,5 +1,6 @@
 ##### 串性GC：
 java -XX:+UseSerialGC -Xms128m -Xmx128m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+
 正在执行...
 2020-10-28T22:12:27.887-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.887-0800: [DefNew: 34299K->4352K(39296K), 0.0056173 secs] 34299K->10031K(126720K), 0.0056602 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
 2020-10-28T22:12:27.906-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.906-0800: [DefNew: 39145K->4332K(39296K), 0.0076279 secs] 44824K->19079K(126720K), 0.0076678 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
@@ -47,6 +48,7 @@ Heap
 
 
 java -XX:+UseSerialGC -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:09:34.288-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.288-0800: [DefNew: 139776K->17471K(157248K), 0.0200327 secs] 139776K->44981K(506816K), 0.0200673 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
 2020-10-28T22:09:34.327-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.327-0800: [DefNew: 157247K->17472K(157248K), 0.0317115 secs] 184757K->93155K(506816K), 0.0317438 secs] [Times: user=0.02 sys=0.02, real=0.03 secs] 
@@ -79,6 +81,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -XX:+UseSerialGC -Xms1g -Xmx1g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:13:51.602-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.602-0800: [DefNew: 279616K->34944K(314560K), 0.0613428 secs] 279616K->85638K(1013632K), 0.0613970 secs] [Times: user=0.03 sys=0.02, real=0.06 secs] 
 2020-10-28T22:13:51.719-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.719-0800: [DefNew: 314560K->34943K(314560K), 0.0845611 secs] 365254K->165665K(1013632K), 0.0846048 secs] [Times: user=0.05 sys=0.03, real=0.09 secs] 
@@ -107,6 +110,7 @@ Heap
 ---
 ##### 并行GC：
 java -Xms256m -Xmx256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis 
+ 
 正在执行...
 2020-10-28T22:26:32.561-0800: [GC (Allocation Failure) [PSYoungGen: 65536K->10751K(76288K)] 65536K->25538K(251392K), 0.0095828 secs] [Times: user=0.01 sys=0.03, real=0.01 secs] 
 2020-10-28T22:26:32.587-0800: [GC (Allocation Failure) [PSYoungGen: 76009K->10738K(76288K)] 90796K->50399K(251392K), 0.0114812 secs] [Times: user=0.02 sys=0.06, real=0.01 secs] 
@@ -162,6 +166,7 @@ Heap
   class space    used 299K, capacity 386K, committed 512K, reserved 1048576K
 
 java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:28:14.122-0800: [GC (Allocation Failure) [PSYoungGen: 131584K->21490K(153088K)] 131584K->39680K(502784K), 0.0140522 secs] [Times: user=0.02 sys=0.06, real=0.01 secs] 
 2020-10-28T22:28:14.153-0800: [GC (Allocation Failure) [PSYoungGen: 153074K->21499K(153088K)] 171264K->83699K(502784K), 0.0226950 secs] [Times: user=0.03 sys=0.10, real=0.02 secs] 
@@ -217,6 +222,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -Xms2g -Xmx2g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:28:59.726-0800: [GC (Allocation Failure) [PSYoungGen: 524800K->87032K(611840K)] 524800K->152331K(2010112K), 0.0548774 secs] [Times: user=0.06 sys=0.26, real=0.06 secs] 
 2020-10-28T22:28:59.859-0800: [GC (Allocation Failure) [PSYoungGen: 611832K->87037K(611840K)] 677131K->270970K(2010112K), 0.0738742 secs] [Times: user=0.08 sys=0.33, real=0.08 secs] 
@@ -236,6 +242,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -Xms4g -Xmx4g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:29:42.713-0800: [GC (Allocation Failure) [PSYoungGen: 1048576K->174588K(1223168K)] 1048576K->232930K(4019712K), 0.0747403 secs] [Times: user=0.09 sys=0.39, real=0.07 secs] 
 2020-10-28T22:29:42.938-0800: [GC (Allocation Failure) [PSYoungGen: 1223164K->174585K(1223168K)] 1281506K->351405K(4019712K), 0.1182772 secs] [Times: user=0.12 sys=0.44, real=0.12 secs] 
@@ -259,6 +266,7 @@ Heap
 ---
 ##### CMSGC
 java -XX:+UseConcMarkSweepGC -Xms256m -Xmx256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:35:02.857-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.857-0800: [ParNew: 69334K->8704K(78656K), 0.0086501 secs] 69334K->26186K(253440K), 0.0086932 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
 2020-10-28T22:35:02.880-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.880-0800: [ParNew: 78656K->8704K(78656K), 0.0105515 secs] 96138K->54160K(253440K), 0.0106158 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
@@ -466,6 +474,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -XX:+UseConcMarkSweepGC -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:39:06.306-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.306-0800: [ParNew: 139776K->17471K(157248K), 0.0156061 secs] 139776K->46157K(506816K), 0.0156488 secs] [Times: user=0.02 sys=0.08, real=0.02 secs] 
 2020-10-28T22:39:06.339-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.339-0800: [ParNew: 157247K->17472K(157248K), 0.0213599 secs] 185933K->91193K(506816K), 0.0214099 secs] [Times: user=0.04 sys=0.09, real=0.03 secs] 
@@ -567,6 +576,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -XX:+UseConcMarkSweepGC -Xms2g -Xmx2g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:39:51.193-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.193-0800: [ParNew: 545344K->68095K(613440K), 0.0575710 secs] 545344K->142455K(2029056K), 0.0576212 secs] [Times: user=0.08 sys=0.17, real=0.06 secs] 
 2020-10-28T22:39:51.340-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.340-0800: [ParNew: 613439K->68096K(613440K), 0.0797184 secs] 687799K->264583K(2029056K), 0.0797808 secs] [Times: user=0.12 sys=0.14, real=0.08 secs] 
@@ -585,6 +595,7 @@ Heap
   class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
 
 java -XX:+UseConcMarkSweepGC -Xms4g -Xmx4g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:40:28.699-0800: [GC (Allocation Failure) 2020-10-28T22:40:28.699-0800: [ParNew: 545344K->68096K(613440K), 0.0513675 secs] 545344K->146893K(4126208K), 0.0514089 secs] [Times: user=0.10 sys=0.22, real=0.06 secs] 
 2020-10-28T22:40:28.826-0800: [GC (Allocation Failure) 2020-10-28T22:40:28.826-0800: [ParNew: 613440K->68096K(613440K), 0.0533149 secs] 692237K->265339K(4126208K), 0.0533514 secs] [Times: user=0.11 sys=0.24, real=0.05 secs] 
@@ -615,6 +626,7 @@ CMSGC 有六个阶段：
 ---
 ##### G1GC
 java -XX:+UseG1GC -Xms512m -Xmx512m -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:44:43.130-0800: [GC pause (G1 Evacuation Pause) (young) 30M->9354K(512M), 0.0083992 secs]
 2020-10-28T22:44:43.153-0800: [GC pause (G1 Evacuation Pause) (young) 45M->22M(512M), 0.0046026 secs]
@@ -872,6 +884,7 @@ java -XX:+UseG1GC -Xms512m -Xmx512m -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAna
 
 
 java -XX:+UseG1GC -Xms1g -Xmx1g -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:45:47.314-0800: [GC pause (G1 Evacuation Pause) (young) 57M->19M(1024M), 0.0067432 secs]
 2020-10-28T22:45:47.335-0800: [GC pause (G1 Evacuation Pause) (young) 70M->33M(1024M), 0.0059246 secs]
@@ -944,6 +957,7 @@ java -XX:+UseG1GC -Xms1g -Xmx1g -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysi
 执行结束!共生成对象次数:13226
 
 java -XX:+UseG1GC -Xms4g -Xmx4g -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+ 
 正在执行...
 2020-10-28T22:46:24.365-0800: [GC pause (G1 Evacuation Pause) (young) 204M->72M(4096M), 0.0229117 secs]
 2020-10-28T22:46:24.414-0800: [GC pause (G1 Evacuation Pause) (young) 250M->130M(4096M), 0.0233855 secs]
