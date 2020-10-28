@@ -1,0 +1,974 @@
+##### 串性GC：
+java -XX:+UseSerialGC -Xms128m -Xmx128m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:12:27.887-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.887-0800: [DefNew: 34299K->4352K(39296K), 0.0056173 secs] 34299K->10031K(126720K), 0.0056602 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:27.906-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.906-0800: [DefNew: 39145K->4332K(39296K), 0.0076279 secs] 44824K->19079K(126720K), 0.0076678 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:27.920-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.920-0800: [DefNew: 39051K->4338K(39296K), 0.0077651 secs] 53798K->33831K(126720K), 0.0078313 secs] [Times: user=0.00 sys=0.01, real=0.00 secs] 
+2020-10-28T22:12:27.937-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.937-0800: [DefNew: 39282K->4315K(39296K), 0.0061941 secs] 68775K->45190K(126720K), 0.0062533 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:27.950-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.950-0800: [DefNew: 39246K->4350K(39296K), 0.0075123 secs] 80121K->56952K(126720K), 0.0075608 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:27.962-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.962-0800: [DefNew: 39076K->4344K(39296K), 0.0093856 secs] 91677K->68863K(126720K), 0.0094212 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:27.977-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.977-0800: [DefNew: 38868K->4350K(39296K), 0.0055896 secs] 103387K->78848K(126720K), 0.0056199 secs] [Times: user=0.01 sys=0.01, real=0.01 secs] 
+2020-10-28T22:12:27.987-0800: [GC (Allocation Failure) 2020-10-28T22:12:27.987-0800: [DefNew: 38967K->38967K(39296K), 0.0000148 secs]2020-10-28T22:12:27.987-0800: [Tenured: 74498K->87287K(87424K), 0.0174464 secs] 113466K->87439K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0175061 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2020-10-28T22:12:28.011-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.011-0800: [Tenured: 87287K->87367K(87424K), 0.0153412 secs] 126550K->96842K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0153855 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.031-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.031-0800: [Tenured: 87367K->87379K(87424K), 0.0083896 secs] 126587K->106145K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0084626 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.045-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.045-0800: [Tenured: 87379K->87331K(87424K), 0.0162890 secs] 126636K->107562K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0163324 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+2020-10-28T22:12:28.065-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.065-0800: [Tenured: 87331K->87331K(87424K), 0.0060266 secs] 126570K->114633K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0060739 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.073-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.073-0800: [Tenured: 87331K->87331K(87424K), 0.0041751 secs] 126550K->117845K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0042106 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.079-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.079-0800: [Tenured: 87331K->87331K(87424K), 0.0031152 secs] 126465K->118944K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0031528 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.083-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.083-0800: [Tenured: 87331K->87387K(87424K), 0.0159017 secs] 126367K->117952K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0159533 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.102-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.102-0800: [Tenured: 87387K->87387K(87424K), 0.0034899 secs] 126546K->121472K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0035423 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.107-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.107-0800: [Tenured: 87387K->87387K(87424K), 0.0050488 secs] 126649K->123217K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0050886 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.112-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.112-0800: [Tenured: 87387K->87387K(87424K), 0.0087134 secs] 126571K->124132K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0087612 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.122-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.122-0800: [Tenured: 87387K->87355K(87424K), 0.0137368 secs] 126609K->123812K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0137771 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.136-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.136-0800: [Tenured: 87355K->87355K(87424K), 0.0018513 secs] 126437K->124545K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0018838 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.138-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.138-0800: [Tenured: 87355K->87355K(87424K), 0.0015925 secs] 126575K->125329K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0016246 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.140-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.140-0800: [Tenured: 87355K->87355K(87424K), 0.0014073 secs] 126506K->125197K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0014336 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.142-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.142-0800: [Tenured: 87355K->87359K(87424K), 0.0173703 secs] 126398K->125012K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0174059 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.160-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.160-0800: [Tenured: 87359K->87359K(87424K), 0.0016780 secs] 126075K->125766K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0017095 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.162-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.162-0800: [Tenured: 87359K->87359K(87424K), 0.0013936 secs] 126588K->125766K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0014229 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.163-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.163-0800: [Tenured: 87359K->87359K(87424K), 0.0015119 secs] 126390K->125997K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0015401 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.165-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.165-0800: [Tenured: 87413K->87413K(87424K), 0.0016613 secs] 126649K->125908K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0017041 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.167-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.167-0800: [Tenured: 87413K->87413K(87424K), 0.0019524 secs] 126584K->126229K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0019896 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.169-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.169-0800: [Tenured: 87413K->87413K(87424K), 0.0015202 secs] 126636K->126229K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0015515 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:12:28.171-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.171-0800: [Tenured: 87413K->87413K(87424K), 0.0014035 secs] 126602K->126302K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0014309 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:12:28.173-0800: [Full GC (Allocation Failure) 2020-10-28T22:12:28.173-0800: [Tenured: 87413K->87394K(87424K), 0.0085499 secs] 126302K->126282K(126720K), [Metaspace: 2717K->2717K(1056768K)], 0.0085751 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at GCLogAnalysis.generateGarbage(GCLogAnalysis.java:42)
+	at GCLogAnalysis.main(GCLogAnalysis.java:25)
+Heap
+ def new generation   total 39296K, used 39076K [0x00000007b8000000, 0x00000007baaa0000, 0x00000007baaa0000)
+  eden space 34944K, 100% used [0x00000007b8000000, 0x00000007ba220000, 0x00000007ba220000)
+  from space 4352K,  94% used [0x00000007ba660000, 0x00000007baa693f8, 0x00000007baaa0000)
+  to   space 4352K,   0% used [0x00000007ba220000, 0x00000007ba220000, 0x00000007ba660000)
+ tenured generation   total 87424K, used 87394K [0x00000007baaa0000, 0x00000007c0000000, 0x00000007c0000000)
+   the space 87424K,  99% used [0x00000007baaa0000, 0x00000007bfff8ac8, 0x00000007bfff8c00, 0x00000007c0000000)
+ Metaspace       used 2748K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 299K, capacity 386K, committed 512K, reserved 1048576K
+
+
+java -XX:+UseSerialGC -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:09:34.288-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.288-0800: [DefNew: 139776K->17471K(157248K), 0.0200327 secs] 139776K->44981K(506816K), 0.0200673 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+2020-10-28T22:09:34.327-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.327-0800: [DefNew: 157247K->17472K(157248K), 0.0317115 secs] 184757K->93155K(506816K), 0.0317438 secs] [Times: user=0.02 sys=0.02, real=0.03 secs] 
+2020-10-28T22:09:34.377-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.377-0800: [DefNew: 157248K->17467K(157248K), 0.0220702 secs] 232931K->137533K(506816K), 0.0221448 secs] [Times: user=0.02 sys=0.01, real=0.02 secs] 
+2020-10-28T22:09:34.417-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.417-0800: [DefNew: 157243K->17471K(157248K), 0.0266330 secs] 277309K->183017K(506816K), 0.0267278 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2020-10-28T22:09:34.461-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.461-0800: [DefNew: 157247K->17471K(157248K), 0.0218781 secs] 322793K->222362K(506816K), 0.0219098 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+2020-10-28T22:09:34.499-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.499-0800: [DefNew: 157218K->17469K(157248K), 0.0275476 secs] 362110K->269831K(506816K), 0.0275790 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2020-10-28T22:09:34.543-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.543-0800: [DefNew: 157245K->17471K(157248K), 0.0256530 secs] 409607K->313754K(506816K), 0.0256852 secs] [Times: user=0.02 sys=0.01, real=0.02 secs] 
+2020-10-28T22:09:34.583-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.583-0800: [DefNew: 157247K->157247K(157248K), 0.0000138 secs]2020-10-28T22:09:34.583-0800: [Tenured: 296282K->254694K(349568K), 0.0377436 secs] 453530K->254694K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0377976 secs] [Times: user=0.03 sys=0.00, real=0.04 secs] 
+2020-10-28T22:09:34.638-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.638-0800: [DefNew: 139403K->17471K(157248K), 0.0067584 secs] 394098K->305054K(506816K), 0.0068095 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:09:34.661-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.661-0800: [DefNew: 156815K->17471K(157248K), 0.0217205 secs] 444398K->346920K(506816K), 0.0217526 secs] [Times: user=0.02 sys=0.01, real=0.02 secs] 
+2020-10-28T22:09:34.700-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.700-0800: [DefNew: 157247K->157247K(157248K), 0.0000141 secs]2020-10-28T22:09:34.700-0800: [Tenured: 329448K->299186K(349568K), 0.0419505 secs] 486696K->299186K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0420103 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:09:34.760-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.760-0800: [DefNew: 139776K->17470K(157248K), 0.0065165 secs] 438962K->346706K(506816K), 0.0065550 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:09:34.789-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.789-0800: [DefNew: 157246K->157246K(157248K), 0.0000177 secs]2020-10-28T22:09:34.789-0800: [Tenured: 329235K->315842K(349568K), 0.0422854 secs] 486482K->315842K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0423514 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+2020-10-28T22:09:34.852-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.852-0800: [DefNew: 139776K->139776K(157248K), 0.0000186 secs]2020-10-28T22:09:34.852-0800: [Tenured: 315842K->312043K(349568K), 0.0466662 secs] 455618K->312043K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0467346 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:09:34.919-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.919-0800: [DefNew: 139776K->139776K(157248K), 0.0000188 secs]2020-10-28T22:09:34.919-0800: [Tenured: 312043K->338372K(349568K), 0.0329405 secs] 451819K->338372K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0330274 secs] [Times: user=0.03 sys=0.01, real=0.04 secs] 
+2020-10-28T22:09:34.972-0800: [GC (Allocation Failure) 2020-10-28T22:09:34.972-0800: [DefNew: 139776K->139776K(157248K), 0.0000179 secs]2020-10-28T22:09:34.972-0800: [Tenured: 338372K->348481K(349568K), 0.0445390 secs] 478148K->348481K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0446078 secs] [Times: user=0.05 sys=0.00, real=0.04 secs] 
+2020-10-28T22:09:35.037-0800: [GC (Allocation Failure) 2020-10-28T22:09:35.037-0800: [DefNew: 139776K->139776K(157248K), 0.0000180 secs]2020-10-28T22:09:35.037-0800: [Tenured: 348481K->349542K(349568K), 0.0450355 secs] 488257K->350487K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0451039 secs] [Times: user=0.04 sys=0.00, real=0.05 secs] 
+2020-10-28T22:09:35.105-0800: [Full GC (Allocation Failure) 2020-10-28T22:09:35.105-0800: [Tenured: 349542K->337704K(349568K), 0.0503554 secs] 506633K->337704K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0504010 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+2020-10-28T22:09:35.177-0800: [GC (Allocation Failure) 2020-10-28T22:09:35.177-0800: [DefNew: 139776K->139776K(157248K), 0.0000186 secs]2020-10-28T22:09:35.177-0800: [Tenured: 337704K->349468K(349568K), 0.0338229 secs] 477480K->358862K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0339700 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+执行结束!共生成对象次数:10273
+Heap
+ def new generation   total 157248K, used 56895K [0x00000007a0000000, 0x00000007aaaa0000, 0x00000007aaaa0000)
+  eden space 139776K,  40% used [0x00000007a0000000, 0x00000007a378fda8, 0x00000007a8880000)
+  from space 17472K,   0% used [0x00000007a8880000, 0x00000007a8880000, 0x00000007a9990000)
+  to   space 17472K,   0% used [0x00000007a9990000, 0x00000007a9990000, 0x00000007aaaa0000)
+ tenured generation   total 349568K, used 349468K [0x00000007aaaa0000, 0x00000007c0000000, 0x00000007c0000000)
+   the space 349568K,  99% used [0x00000007aaaa0000, 0x00000007bffe7378, 0x00000007bffe7400, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -XX:+UseSerialGC -Xms1g -Xmx1g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:13:51.602-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.602-0800: [DefNew: 279616K->34944K(314560K), 0.0613428 secs] 279616K->85638K(1013632K), 0.0613970 secs] [Times: user=0.03 sys=0.02, real=0.06 secs] 
+2020-10-28T22:13:51.719-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.719-0800: [DefNew: 314560K->34943K(314560K), 0.0845611 secs] 365254K->165665K(1013632K), 0.0846048 secs] [Times: user=0.05 sys=0.03, real=0.09 secs] 
+2020-10-28T22:13:51.839-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.839-0800: [DefNew: 314559K->34943K(314560K), 0.0567935 secs] 445281K->250806K(1013632K), 0.0568322 secs] [Times: user=0.04 sys=0.02, real=0.06 secs] 
+2020-10-28T22:13:51.930-0800: [GC (Allocation Failure) 2020-10-28T22:13:51.930-0800: [DefNew: 314559K->34943K(314560K), 0.0506676 secs] 530422K->327227K(1013632K), 0.0507330 secs] [Times: user=0.03 sys=0.02, real=0.05 secs] 
+2020-10-28T22:13:52.014-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.014-0800: [DefNew: 314559K->34943K(314560K), 0.0437533 secs] 606843K->405911K(1013632K), 0.0437875 secs] [Times: user=0.03 sys=0.02, real=0.04 secs] 
+2020-10-28T22:13:52.087-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.087-0800: [DefNew: 314559K->34944K(314560K), 0.0475288 secs] 685527K->488662K(1013632K), 0.0475623 secs] [Times: user=0.03 sys=0.01, real=0.05 secs] 
+2020-10-28T22:13:52.165-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.165-0800: [DefNew: 314560K->34942K(314560K), 0.0451459 secs] 768278K->567736K(1013632K), 0.0451806 secs] [Times: user=0.03 sys=0.02, real=0.05 secs] 
+2020-10-28T22:13:52.240-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.240-0800: [DefNew: 314558K->34944K(314560K), 0.0492702 secs] 847352K->650610K(1013632K), 0.0493038 secs] [Times: user=0.03 sys=0.02, real=0.04 secs] 
+2020-10-28T22:13:52.320-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.320-0800: [DefNew: 314560K->314560K(314560K), 0.0000150 secs]2020-10-28T22:13:52.320-0800: [Tenured: 615666K->384160K(699072K), 0.0775194 secs] 930226K->384160K(1013632K), [Metaspace: 2717K->2717K(1056768K)], 0.0775790 secs] [Times: user=0.08 sys=0.00, real=0.07 secs] 
+2020-10-28T22:13:52.433-0800: [GC (Allocation Failure) 2020-10-28T22:13:52.433-0800: [DefNew: 279616K->34943K(314560K), 0.0149836 secs] 663776K->470186K(1013632K), 0.0150219 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+执行结束!共生成对象次数:11090
+Heap
+ def new generation   total 314560K, used 166803K [0x0000000780000000, 0x0000000795550000, 0x0000000795550000)
+  eden space 279616K,  47% used [0x0000000780000000, 0x00000007880c4d78, 0x0000000791110000)
+  from space 34944K,  99% used [0x0000000793330000, 0x000000079554fff0, 0x0000000795550000)
+  to   space 34944K,   0% used [0x0000000791110000, 0x0000000791110000, 0x0000000793330000)
+ tenured generation   total 699072K, used 435242K [0x0000000795550000, 0x00000007c0000000, 0x00000007c0000000)
+   the space 699072K,  62% used [0x0000000795550000, 0x00000007afe5a830, 0x00000007afe5aa00, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+串性GC， Xms\Xmx 设置为128m，发现几次youngGC后会一直触发FullGC，后来会出现OOM；设置为512m, 发生了几次FullGC，GC时间明显变长；设置为1g时，没有发生FullGC，但是youngGC时间变得更长，如果触发FullGC，FullGC时间也很长；
+串性GC适合单核的服务器，并且堆内存较小；否则会导致GC时间较长，业务暂停时间较长；
+
+---
+##### 并行GC：
+java -Xms256m -Xmx256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis 
+正在执行...
+2020-10-28T22:26:32.561-0800: [GC (Allocation Failure) [PSYoungGen: 65536K->10751K(76288K)] 65536K->25538K(251392K), 0.0095828 secs] [Times: user=0.01 sys=0.03, real=0.01 secs] 
+2020-10-28T22:26:32.587-0800: [GC (Allocation Failure) [PSYoungGen: 76009K->10738K(76288K)] 90796K->50399K(251392K), 0.0114812 secs] [Times: user=0.02 sys=0.06, real=0.01 secs] 
+2020-10-28T22:26:32.607-0800: [GC (Allocation Failure) [PSYoungGen: 76224K->10741K(76288K)] 115885K->75026K(251392K), 0.0115627 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
+2020-10-28T22:26:32.628-0800: [GC (Allocation Failure) [PSYoungGen: 76277K->10739K(76288K)] 140562K->102461K(251392K), 0.0146794 secs] [Times: user=0.03 sys=0.05, real=0.02 secs] 
+2020-10-28T22:26:32.652-0800: [GC (Allocation Failure) [PSYoungGen: 76148K->10733K(76288K)] 167870K->122488K(251392K), 0.0089952 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
+2020-10-28T22:26:32.669-0800: [GC (Allocation Failure) [PSYoungGen: 76165K->10748K(40448K)] 187921K->145528K(215552K), 0.0083279 secs] [Times: user=0.02 sys=0.03, real=0.01 secs] 
+2020-10-28T22:26:32.682-0800: [GC (Allocation Failure) [PSYoungGen: 40322K->19165K(58368K)] 175101K->157584K(233472K), 0.0044270 secs] [Times: user=0.02 sys=0.01, real=0.00 secs] 
+2020-10-28T22:26:32.690-0800: [GC (Allocation Failure) [PSYoungGen: 48813K->28654K(58368K)] 187231K->169519K(233472K), 0.0024066 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:32.692-0800: [Full GC (Ergonomics) [PSYoungGen: 28654K->0K(58368K)] [ParOldGen: 140865K->141369K(175104K)] 169519K->141369K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0183472 secs] [Times: user=0.11 sys=0.01, real=0.02 secs] 
+2020-10-28T22:26:32.716-0800: [GC (Allocation Failure) [PSYoungGen: 29613K->10103K(58368K)] 170982K->151472K(233472K), 0.0011281 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:32.721-0800: [GC (Allocation Failure) [PSYoungGen: 39623K->22204K(58368K)] 180992K->163573K(233472K), 0.0015869 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:32.727-0800: [GC (Allocation Failure) [PSYoungGen: 51711K->11333K(58368K)] 193080K->174204K(233472K), 0.0111917 secs] [Times: user=0.02 sys=0.05, real=0.01 secs] 
+2020-10-28T22:26:32.738-0800: [Full GC (Ergonomics) [PSYoungGen: 11333K->0K(58368K)] [ParOldGen: 162870K->163519K(175104K)] 174204K->163519K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0166725 secs] [Times: user=0.10 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:32.760-0800: [Full GC (Ergonomics) [PSYoungGen: 29696K->0K(58368K)] [ParOldGen: 163519K->169664K(175104K)] 193215K->169664K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0210788 secs] [Times: user=0.10 sys=0.01, real=0.02 secs] 
+2020-10-28T22:26:32.789-0800: [Full GC (Ergonomics) [PSYoungGen: 29673K->1751K(58368K)] [ParOldGen: 169664K->175011K(175104K)] 199338K->176762K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0212181 secs] [Times: user=0.12 sys=0.01, real=0.03 secs] 
+2020-10-28T22:26:32.817-0800: [Full GC (Ergonomics) [PSYoungGen: 29258K->4837K(58368K)] [ParOldGen: 175011K->174530K(175104K)] 204270K->179367K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0203923 secs] [Times: user=0.13 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:32.842-0800: [Full GC (Ergonomics) [PSYoungGen: 29682K->11612K(58368K)] [ParOldGen: 174530K->174683K(175104K)] 204212K->186296K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0247303 secs] [Times: user=0.16 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:32.872-0800: [Full GC (Ergonomics) [PSYoungGen: 29541K->13843K(58368K)] [ParOldGen: 174683K->174653K(175104K)] 204224K->188496K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0215179 secs] [Times: user=0.14 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:32.896-0800: [Full GC (Ergonomics) [PSYoungGen: 29198K->17928K(58368K)] [ParOldGen: 174653K->174628K(175104K)] 203851K->192557K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0238551 secs] [Times: user=0.15 sys=0.00, real=0.03 secs] 
+2020-10-28T22:26:32.922-0800: [Full GC (Ergonomics) [PSYoungGen: 29593K->20191K(58368K)] [ParOldGen: 174628K->174948K(175104K)] 204221K->195140K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0230586 secs] [Times: user=0.12 sys=0.01, real=0.02 secs] 
+2020-10-28T22:26:32.947-0800: [Full GC (Ergonomics) [PSYoungGen: 29696K->20718K(58368K)] [ParOldGen: 174948K->174803K(175104K)] 204644K->195521K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0233980 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+2020-10-28T22:26:32.974-0800: [Full GC (Ergonomics) [PSYoungGen: 29688K->22768K(58368K)] [ParOldGen: 174803K->174721K(175104K)] 204491K->197489K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0223425 secs] [Times: user=0.14 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:32.998-0800: [Full GC (Ergonomics) [PSYoungGen: 29414K->23517K(58368K)] [ParOldGen: 174721K->174553K(175104K)] 204135K->198071K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0273261 secs] [Times: user=0.17 sys=0.00, real=0.03 secs] 
+2020-10-28T22:26:33.027-0800: [Full GC (Ergonomics) [PSYoungGen: 29594K->22844K(58368K)] [ParOldGen: 174553K->174950K(175104K)] 204148K->197794K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0233371 secs] [Times: user=0.13 sys=0.00, real=0.03 secs] 
+2020-10-28T22:26:33.052-0800: [Full GC (Ergonomics) [PSYoungGen: 29597K->24187K(58368K)] [ParOldGen: 174950K->174924K(175104K)] 204548K->199111K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0288878 secs] [Times: user=0.16 sys=0.00, real=0.03 secs] 
+2020-10-28T22:26:33.082-0800: [Full GC (Ergonomics) [PSYoungGen: 29564K->25463K(58368K)] [ParOldGen: 174924K->174863K(175104K)] 204489K->200326K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0273070 secs] [Times: user=0.18 sys=0.01, real=0.02 secs] 
+2020-10-28T22:26:33.110-0800: [Full GC (Ergonomics) [PSYoungGen: 29394K->26204K(58368K)] [ParOldGen: 174863K->174748K(175104K)] 204257K->200953K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0108624 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2020-10-28T22:26:33.122-0800: [Full GC (Ergonomics) [PSYoungGen: 29604K->26360K(58368K)] [ParOldGen: 174748K->174838K(175104K)] 204353K->201198K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0250289 secs] [Times: user=0.17 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:33.148-0800: [Full GC (Ergonomics) [PSYoungGen: 29490K->27246K(58368K)] [ParOldGen: 174838K->174770K(175104K)] 204329K->202017K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0200149 secs] [Times: user=0.12 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:33.169-0800: [Full GC (Ergonomics) [PSYoungGen: 29602K->28634K(58368K)] [ParOldGen: 174770K->174705K(175104K)] 204373K->203339K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0138272 secs] [Times: user=0.09 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:33.183-0800: [Full GC (Ergonomics) [PSYoungGen: 29695K->28521K(58368K)] [ParOldGen: 174705K->174523K(175104K)] 204400K->203045K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0219891 secs] [Times: user=0.14 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:33.205-0800: [Full GC (Ergonomics) [PSYoungGen: 29596K->27935K(58368K)] [ParOldGen: 174523K->174804K(175104K)] 204119K->202739K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0125055 secs] [Times: user=0.07 sys=0.00, real=0.01 secs] 
+2020-10-28T22:26:33.218-0800: [Full GC (Ergonomics) [PSYoungGen: 29644K->28795K(58368K)] [ParOldGen: 174804K->174682K(175104K)] 204448K->203478K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0198531 secs] [Times: user=0.14 sys=0.00, real=0.02 secs] 
+2020-10-28T22:26:33.238-0800: [Full GC (Ergonomics) [PSYoungGen: 29677K->28852K(58368K)] [ParOldGen: 174682K->174631K(175104K)] 204360K->203483K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0062703 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-28T22:26:33.245-0800: [Full GC (Ergonomics) [PSYoungGen: 29573K->29377K(58368K)] [ParOldGen: 174631K->174631K(175104K)] 204205K->204009K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0029677 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:33.248-0800: [Full GC (Ergonomics) [PSYoungGen: 29692K->29468K(58368K)] [ParOldGen: 174631K->174460K(175104K)] 204323K->203929K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0052562 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-28T22:26:33.253-0800: [Full GC (Ergonomics) [PSYoungGen: 29613K->29531K(58368K)] [ParOldGen: 174460K->174460K(175104K)] 204074K->203992K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0020711 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:33.256-0800: [Full GC (Ergonomics) [PSYoungGen: 29689K->29603K(58368K)] [ParOldGen: 174460K->174460K(175104K)] 204149K->204064K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0019085 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:26:33.258-0800: [Full GC (Ergonomics) [PSYoungGen: 29664K->29365K(58368K)] [ParOldGen: 175086K->175086K(175104K)] 204751K->204452K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0049707 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-28T22:26:33.263-0800: [Full GC (Allocation Failure) [PSYoungGen: 29365K->29365K(58368K)] [ParOldGen: 175086K->175067K(175104K)] 204452K->204432K(233472K), [Metaspace: 2717K->2717K(1056768K)], 0.0157444 secs] [Times: user=0.09 sys=0.00, real=0.01 secs] 
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at GCLogAnalysis.generateGarbage(GCLogAnalysis.java:48)
+	at GCLogAnalysis.main(GCLogAnalysis.java:25)
+Heap
+ PSYoungGen      total 58368K, used 29696K [0x00000007bab00000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 29696K, 100% used [0x00000007bab00000,0x00000007bc800000,0x00000007bc800000)
+  from space 28672K, 0% used [0x00000007bc800000,0x00000007bc800000,0x00000007be400000)
+  to   space 28672K, 0% used [0x00000007be400000,0x00000007be400000,0x00000007c0000000)
+ ParOldGen       total 175104K, used 175067K [0x00000007b0000000, 0x00000007bab00000, 0x00000007bab00000)
+  object space 175104K, 99% used [0x00000007b0000000,0x00000007baaf6ef0,0x00000007bab00000)
+ Metaspace       used 2748K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 299K, capacity 386K, committed 512K, reserved 1048576K
+
+java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:28:14.122-0800: [GC (Allocation Failure) [PSYoungGen: 131584K->21490K(153088K)] 131584K->39680K(502784K), 0.0140522 secs] [Times: user=0.02 sys=0.06, real=0.01 secs] 
+2020-10-28T22:28:14.153-0800: [GC (Allocation Failure) [PSYoungGen: 153074K->21499K(153088K)] 171264K->83699K(502784K), 0.0226950 secs] [Times: user=0.03 sys=0.10, real=0.02 secs] 
+2020-10-28T22:28:14.197-0800: [GC (Allocation Failure) [PSYoungGen: 153083K->21500K(153088K)] 215283K->126079K(502784K), 0.0183747 secs] [Times: user=0.04 sys=0.08, real=0.02 secs] 
+2020-10-28T22:28:14.231-0800: [GC (Allocation Failure) [PSYoungGen: 153084K->21498K(153088K)] 257663K->170397K(502784K), 0.0243052 secs] [Times: user=0.07 sys=0.08, real=0.02 secs] 
+2020-10-28T22:28:14.273-0800: [GC (Allocation Failure) [PSYoungGen: 153082K->21495K(153088K)] 301981K->213993K(502784K), 0.0192588 secs] [Times: user=0.04 sys=0.07, real=0.02 secs] 
+2020-10-28T22:28:14.308-0800: [GC (Allocation Failure) [PSYoungGen: 153079K->21501K(80384K)] 345577K->259275K(430080K), 0.0212708 secs] [Times: user=0.04 sys=0.09, real=0.02 secs] 
+2020-10-28T22:28:14.336-0800: [GC (Allocation Failure) [PSYoungGen: 80128K->35126K(116736K)] 317902K->277726K(466432K), 0.0049167 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-28T22:28:14.350-0800: [GC (Allocation Failure) [PSYoungGen: 94006K->49506K(116736K)] 336606K->296915K(466432K), 0.0076164 secs] [Times: user=0.04 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.366-0800: [GC (Allocation Failure) [PSYoungGen: 108386K->57798K(116736K)] 355795K->315315K(466432K), 0.0088336 secs] [Times: user=0.04 sys=0.01, real=0.01 secs] 
+2020-10-28T22:28:14.385-0800: [GC (Allocation Failure) [PSYoungGen: 116678K->40537K(116736K)] 374195K->332467K(466432K), 0.0183962 secs] [Times: user=0.04 sys=0.08, real=0.02 secs] 
+2020-10-28T22:28:14.403-0800: [Full GC (Ergonomics) [PSYoungGen: 40537K->0K(116736K)] [ParOldGen: 291929K->232578K(349696K)] 332467K->232578K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0298273 secs] [Times: user=0.17 sys=0.00, real=0.03 secs] 
+2020-10-28T22:28:14.442-0800: [GC (Allocation Failure) [PSYoungGen: 58880K->21037K(116736K)] 291458K->253615K(466432K), 0.0018059 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.455-0800: [GC (Allocation Failure) [PSYoungGen: 79855K->20762K(116736K)] 312434K->273509K(466432K), 0.0042933 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.469-0800: [GC (Allocation Failure) [PSYoungGen: 79315K->18403K(116736K)] 332062K->290863K(466432K), 0.0045773 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.483-0800: [GC (Allocation Failure) [PSYoungGen: 77072K->15531K(116736K)] 349533K->305293K(466432K), 0.0027703 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.494-0800: [GC (Allocation Failure) [PSYoungGen: 74211K->19569K(116736K)] 363973K->324076K(466432K), 0.0099533 secs] [Times: user=0.02 sys=0.03, real=0.01 secs] 
+2020-10-28T22:28:14.504-0800: [Full GC (Ergonomics) [PSYoungGen: 19569K->0K(116736K)] [ParOldGen: 304506K->263466K(349696K)] 324076K->263466K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0290558 secs] [Times: user=0.17 sys=0.00, real=0.03 secs] 
+2020-10-28T22:28:14.542-0800: [GC (Allocation Failure) [PSYoungGen: 58768K->18677K(116736K)] 322234K->282144K(466432K), 0.0024779 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.556-0800: [GC (Allocation Failure) [PSYoungGen: 77536K->20075K(116736K)] 341003K->300975K(466432K), 0.0036893 secs] [Times: user=0.03 sys=0.01, real=0.01 secs] 
+2020-10-28T22:28:14.569-0800: [GC (Allocation Failure) [PSYoungGen: 78897K->17563K(116736K)] 359798K->317547K(466432K), 0.0043008 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.582-0800: [GC (Allocation Failure) [PSYoungGen: 76345K->21224K(116736K)] 376329K->336506K(466432K), 0.0067302 secs] [Times: user=0.02 sys=0.02, real=0.00 secs] 
+2020-10-28T22:28:14.589-0800: [Full GC (Ergonomics) [PSYoungGen: 21224K->0K(116736K)] [ParOldGen: 315281K->274343K(349696K)] 336506K->274343K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0352019 secs] [Times: user=0.20 sys=0.00, real=0.04 secs] 
+2020-10-28T22:28:14.634-0800: [GC (Allocation Failure) [PSYoungGen: 58699K->21583K(116736K)] 333043K->295926K(466432K), 0.0018727 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.644-0800: [GC (Allocation Failure) [PSYoungGen: 80240K->19567K(116736K)] 354584K->314414K(466432K), 0.0043028 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.661-0800: [GC (Allocation Failure) [PSYoungGen: 78445K->18051K(116736K)] 373292K->332289K(466432K), 0.0033283 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.665-0800: [Full GC (Ergonomics) [PSYoungGen: 18051K->0K(116736K)] [ParOldGen: 314237K->279557K(349696K)] 332289K->279557K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0300246 secs] [Times: user=0.16 sys=0.00, real=0.03 secs] 
+2020-10-28T22:28:14.707-0800: [GC (Allocation Failure) [PSYoungGen: 58880K->23693K(116736K)] 338437K->303251K(466432K), 0.0021838 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.718-0800: [GC (Allocation Failure) [PSYoungGen: 82520K->20810K(116736K)] 362078K->322838K(466432K), 0.0048613 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.731-0800: [GC (Allocation Failure) [PSYoungGen: 79595K->22093K(116736K)] 381623K->343791K(466432K), 0.0063690 secs] [Times: user=0.02 sys=0.02, real=0.00 secs] 
+2020-10-28T22:28:14.737-0800: [Full GC (Ergonomics) [PSYoungGen: 22093K->0K(116736K)] [ParOldGen: 321698K->302897K(349696K)] 343791K->302897K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0383449 secs] [Times: user=0.23 sys=0.00, real=0.04 secs] 
+2020-10-28T22:28:14.788-0800: [GC (Allocation Failure) [PSYoungGen: 58880K->18328K(116736K)] 361777K->321225K(466432K), 0.0017626 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.800-0800: [GC (Allocation Failure) [PSYoungGen: 77208K->21029K(116736K)] 380105K->340622K(466432K), 0.0052302 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.805-0800: [Full GC (Ergonomics) [PSYoungGen: 21029K->0K(116736K)] [ParOldGen: 319592K->308471K(349696K)] 340622K->308471K(466432K), [Metaspace: 2717K->2717K(1056768K)], 0.0338325 secs] [Times: user=0.20 sys=0.01, real=0.03 secs] 
+2020-10-28T22:28:14.852-0800: [GC (Allocation Failure) [PSYoungGen: 58730K->18954K(117248K)] 367202K->327426K(466944K), 0.0020659 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.863-0800: [GC (Allocation Failure) [PSYoungGen: 78346K->36939K(116736K)] 386818K->345411K(466432K), 0.0030854 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.876-0800: [GC (Allocation Failure) [PSYoungGen: 96210K->18695K(118272K)] 404682K->362184K(467968K), 0.0125121 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
+2020-10-28T22:28:14.888-0800: [Full GC (Ergonomics) [PSYoungGen: 18695K->0K(118272K)] [ParOldGen: 343489K->311504K(349696K)] 362184K->311504K(467968K), [Metaspace: 2717K->2717K(1056768K)], 0.0379051 secs] [Times: user=0.23 sys=0.00, real=0.04 secs] 
+2020-10-28T22:28:14.938-0800: [GC (Allocation Failure) [PSYoungGen: 60240K->25437K(116736K)] 371744K->336942K(466432K), 0.0035339 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.953-0800: [GC (Allocation Failure) [PSYoungGen: 85819K->41649K(114688K)] 397324K->353154K(464384K), 0.0045659 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+2020-10-28T22:28:14.966-0800: [GC (Allocation Failure) [PSYoungGen: 102030K->56809K(117760K)] 413535K->374133K(467456K), 0.0059396 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 
+2020-10-28T22:28:14.972-0800: [Full GC (Ergonomics) [PSYoungGen: 56809K->0K(117760K)] [ParOldGen: 317324K->333231K(349696K)] 374133K->333231K(467456K), [Metaspace: 2717K->2717K(1056768K)], 0.0427687 secs] [Times: user=0.24 sys=0.01, real=0.04 secs] 
+2020-10-28T22:28:15.026-0800: [Full GC (Ergonomics) [PSYoungGen: 60796K->0K(117760K)] [ParOldGen: 333231K->333581K(349696K)] 394028K->333581K(467456K), [Metaspace: 2717K->2717K(1056768K)], 0.0430205 secs] [Times: user=0.26 sys=0.00, real=0.04 secs] 
+执行结束!共生成对象次数:9303
+Heap
+ PSYoungGen      total 117760K, used 2706K [0x00000007b5580000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 60928K, 4% used [0x00000007b5580000,0x00000007b58249b0,0x00000007b9100000)
+  from space 56832K, 0% used [0x00000007b9100000,0x00000007b9100000,0x00000007bc880000)
+  to   space 56832K, 0% used [0x00000007bc880000,0x00000007bc880000,0x00000007c0000000)
+ ParOldGen       total 349696K, used 333581K [0x00000007a0000000, 0x00000007b5580000, 0x00000007b5580000)
+  object space 349696K, 95% used [0x00000007a0000000,0x00000007b45c34f0,0x00000007b5580000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -Xms2g -Xmx2g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:28:59.726-0800: [GC (Allocation Failure) [PSYoungGen: 524800K->87032K(611840K)] 524800K->152331K(2010112K), 0.0548774 secs] [Times: user=0.06 sys=0.26, real=0.06 secs] 
+2020-10-28T22:28:59.859-0800: [GC (Allocation Failure) [PSYoungGen: 611832K->87037K(611840K)] 677131K->270970K(2010112K), 0.0738742 secs] [Times: user=0.08 sys=0.33, real=0.08 secs] 
+2020-10-28T22:28:59.997-0800: [GC (Allocation Failure) [PSYoungGen: 611837K->87039K(611840K)] 795770K->384673K(2010112K), 0.1082324 secs] [Times: user=0.12 sys=0.16, real=0.11 secs] 
+2020-10-28T22:29:00.183-0800: [GC (Allocation Failure) [PSYoungGen: 611839K->87028K(611840K)] 909473K->506476K(2010112K), 0.0888164 secs] [Times: user=0.16 sys=0.16, real=0.09 secs] 
+2020-10-28T22:29:00.347-0800: [GC (Allocation Failure) [PSYoungGen: 611828K->87033K(611840K)] 1031276K->613327K(2010112K), 0.0621183 secs] [Times: user=0.16 sys=0.14, real=0.06 secs] 
+2020-10-28T22:29:00.472-0800: [GC (Allocation Failure) [PSYoungGen: 611833K->87038K(322048K)] 1138127K->734569K(1720320K), 0.0612151 secs] [Times: user=0.13 sys=0.17, real=0.06 secs] 
+执行结束!共生成对象次数:11850
+Heap
+ PSYoungGen      total 322048K, used 96527K [0x0000000795580000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 235008K, 4% used [0x0000000795580000,0x0000000795ec44f8,0x00000007a3b00000)
+  from space 87040K, 99% used [0x00000007bab00000,0x00000007bffff9c8,0x00000007c0000000)
+  to   space 231936K, 0% used [0x00000007a3b00000,0x00000007a3b00000,0x00000007b1d80000)
+ ParOldGen       total 1398272K, used 647530K [0x0000000740000000, 0x0000000795580000, 0x0000000795580000)
+  object space 1398272K, 46% used [0x0000000740000000,0x000000076785abd8,0x0000000795580000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -Xms4g -Xmx4g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:29:42.713-0800: [GC (Allocation Failure) [PSYoungGen: 1048576K->174588K(1223168K)] 1048576K->232930K(4019712K), 0.0747403 secs] [Times: user=0.09 sys=0.39, real=0.07 secs] 
+2020-10-28T22:29:42.938-0800: [GC (Allocation Failure) [PSYoungGen: 1223164K->174585K(1223168K)] 1281506K->351405K(4019712K), 0.1182772 secs] [Times: user=0.12 sys=0.44, real=0.12 secs] 
+2020-10-28T22:29:43.181-0800: [GC (Allocation Failure) [PSYoungGen: 1223161K->174587K(1223168K)] 1399981K->491580K(4019712K), 0.0788023 secs] [Times: user=0.19 sys=0.21, real=0.08 secs] 
+执行结束!共生成对象次数:11999
+Heap
+ PSYoungGen      total 1223168K, used 216805K [0x000000076ab00000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 1048576K, 4% used [0x000000076ab00000,0x000000076d43a8a0,0x00000007aab00000)
+  from space 174592K, 99% used [0x00000007aab00000,0x00000007b557ec78,0x00000007b5580000)
+  to   space 174592K, 0% used [0x00000007b5580000,0x00000007b5580000,0x00000007c0000000)
+ ParOldGen       total 2796544K, used 316993K [0x00000006c0000000, 0x000000076ab00000, 0x000000076ab00000)
+  object space 2796544K, 11% used [0x00000006c0000000,0x00000006d3590560,0x000000076ab00000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+
+在并行GC 下， young GC 处理 young 区， Full GC 处理 young 区 和 old 区。
+并行GC 如果堆内存设置为256m， 在触发几次youngGC后会一直触发FullGC;堆内存设置越大youngGC次数越少，对应的GC时间越长；
+由于并行GC会占用服务全部cpu进行GC，所以内存设置不应太大，以免影响到业务吞吐量。建议堆内存512m-4g;
+
+---
+##### CMSGC
+java -XX:+UseConcMarkSweepGC -Xms256m -Xmx256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:35:02.857-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.857-0800: [ParNew: 69334K->8704K(78656K), 0.0086501 secs] 69334K->26186K(253440K), 0.0086932 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
+2020-10-28T22:35:02.880-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.880-0800: [ParNew: 78656K->8704K(78656K), 0.0105515 secs] 96138K->54160K(253440K), 0.0106158 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
+2020-10-28T22:35:02.901-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.901-0800: [ParNew: 78656K->8696K(78656K), 0.0147682 secs] 124112K->81536K(253440K), 0.0148129 secs] [Times: user=0.09 sys=0.01, real=0.01 secs] 
+2020-10-28T22:35:02.927-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.927-0800: [ParNew: 78544K->8703K(78656K), 0.0134179 secs] 151385K->104109K(253440K), 0.0134549 secs] [Times: user=0.09 sys=0.01, real=0.02 secs] 
+2020-10-28T22:35:02.940-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 95405K(174784K)] 104378K(253440K), 0.0002645 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:02.941-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:02.941-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:02.942-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:02.942-0800: [CMS-concurrent-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:02.942-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:02.952-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.952-0800: [ParNew: 78410K->8703K(78656K), 0.0132793 secs] 173815K->126370K(253440K), 0.0133144 secs] [Times: user=0.09 sys=0.01, real=0.01 secs] 
+2020-10-28T22:35:02.974-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.974-0800: [ParNew: 78655K->8699K(78656K), 0.0105410 secs] 196322K->147149K(253440K), 0.0105759 secs] [Times: user=0.07 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:02.995-0800: [GC (Allocation Failure) 2020-10-28T22:35:02.995-0800: [ParNew: 78356K->8701K(78656K), 0.0103768 secs] 216806K->166618K(253440K), 0.0104330 secs] [Times: user=0.07 sys=0.01, real=0.01 secs] 
+2020-10-28T22:35:03.018-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.018-0800: [ParNew: 78653K->78653K(78656K), 0.0000169 secs]2020-10-28T22:35:03.018-0800: [CMS2020-10-28T22:35:03.018-0800: [CMS-concurrent-abortable-preclean: 0.002/0.076 secs] [Times: user=0.27 sys=0.02, real=0.07 secs] 
+ (concurrent mode failure): 157916K->148058K(174784K), 0.0250225 secs] 236570K->148058K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0250863 secs] [Times: user=0.02 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.053-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.053-0800: [ParNew: 69870K->8703K(78656K), 0.0052531 secs] 217929K->172086K(253440K), 0.0052921 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.058-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 163383K(174784K)] 172230K(253440K), 0.0001420 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.059-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.060-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.060-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.060-0800: [CMS-concurrent-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.060-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.060-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.060-0800: [GC (CMS Final Remark) [YG occupancy: 14290 K (78656 K)]2020-10-28T22:35:03.060-0800: [Rescan (parallel) , 0.0008348 secs]2020-10-28T22:35:03.061-0800: [weak refs processing, 0.0000260 secs]2020-10-28T22:35:03.061-0800: [class unloading, 0.0008101 secs]2020-10-28T22:35:03.062-0800: [scrub symbol table, 0.0008647 secs]2020-10-28T22:35:03.063-0800: [scrub string table, 0.0004041 secs][1 CMS-remark: 163383K(174784K)] 177673K(253440K), 0.0030136 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.063-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.064-0800: [CMS-concurrent-sweep: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.064-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.064-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.072-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.072-0800: [ParNew (promotion failed): 78655K->78655K(78656K), 0.0075531 secs]2020-10-28T22:35:03.080-0800: [CMS: 173171K->174703K(174784K), 0.0288732 secs] 233309K->174703K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0364753 secs] [Times: user=0.08 sys=0.01, real=0.03 secs] 
+2020-10-28T22:35:03.109-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174703K(174784K)] 176182K(253440K), 0.0001792 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.109-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.110-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.110-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.110-0800: [CMS-concurrent-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.110-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.110-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.110-0800: [GC (CMS Final Remark) [YG occupancy: 8740 K (78656 K)]2020-10-28T22:35:03.110-0800: [Rescan (parallel) , 0.0002936 secs]2020-10-28T22:35:03.111-0800: [weak refs processing, 0.0000107 secs]2020-10-28T22:35:03.111-0800: [class unloading, 0.0002290 secs]2020-10-28T22:35:03.111-0800: [scrub symbol table, 0.0003192 secs]2020-10-28T22:35:03.111-0800: [scrub string table, 0.0001945 secs][1 CMS-remark: 174703K(174784K)] 183444K(253440K), 0.0010909 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.112-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.112-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.112-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.112-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.122-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.122-0800: [ParNew: 69724K->69724K(78656K), 0.0000573 secs]2020-10-28T22:35:03.122-0800: [CMS: 174559K->174757K(174784K), 0.0313014 secs] 244284K->188019K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0314122 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.154-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174757K(174784K)] 188628K(253440K), 0.0001595 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.154-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.155-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.155-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.156-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.156-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.156-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.156-0800: [GC (CMS Final Remark) [YG occupancy: 25079 K (78656 K)]2020-10-28T22:35:03.156-0800: [Rescan (parallel) , 0.0003335 secs]2020-10-28T22:35:03.156-0800: [weak refs processing, 0.0000137 secs]2020-10-28T22:35:03.156-0800: [class unloading, 0.0002203 secs]2020-10-28T22:35:03.156-0800: [scrub symbol table, 0.0003243 secs]2020-10-28T22:35:03.157-0800: [scrub string table, 0.0002015 secs][1 CMS-remark: 174757K(174784K)] 199836K(253440K), 0.0011406 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.157-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.157-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.157-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.157-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.167-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.167-0800: [ParNew: 78499K->78499K(78656K), 0.0000217 secs]2020-10-28T22:35:03.167-0800: [CMS: 174686K->174701K(174784K), 0.0330867 secs] 253185K->197329K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0331810 secs] [Times: user=0.03 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.200-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174701K(174784K)] 197623K(253440K), 0.0002383 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.201-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.202-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.202-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.203-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.203-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.203-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.203-0800: [GC (CMS Final Remark) [YG occupancy: 32013 K (78656 K)]2020-10-28T22:35:03.203-0800: [Rescan (parallel) , 0.0009212 secs]2020-10-28T22:35:03.204-0800: [weak refs processing, 0.0000263 secs]2020-10-28T22:35:03.204-0800: [class unloading, 0.0002395 secs]2020-10-28T22:35:03.204-0800: [scrub symbol table, 0.0003275 secs]2020-10-28T22:35:03.204-0800: [scrub string table, 0.0002011 secs][1 CMS-remark: 174701K(174784K)] 206715K(253440K), 0.0017701 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.205-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.205-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.205-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.205-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.212-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.212-0800: [ParNew: 78611K->78611K(78656K), 0.0000214 secs]2020-10-28T22:35:03.212-0800: [CMS: 174236K->174543K(174784K), 0.0398590 secs] 252848K->209737K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0399300 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.252-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174543K(174784K)] 210025K(253440K), 0.0002010 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.252-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.254-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.254-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.255-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.255-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.255-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.255-0800: [GC (CMS Final Remark) [YG occupancy: 51324 K (78656 K)]2020-10-28T22:35:03.255-0800: [Rescan (parallel) , 0.0003385 secs]2020-10-28T22:35:03.255-0800: [weak refs processing, 0.0000317 secs]2020-10-28T22:35:03.255-0800: [class unloading, 0.0002799 secs]2020-10-28T22:35:03.256-0800: [scrub symbol table, 0.0003541 secs]2020-10-28T22:35:03.256-0800: [scrub string table, 0.0001969 secs][1 CMS-remark: 174543K(174784K)] 225868K(253440K), 0.0012692 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.256-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.257-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.257-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.257-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.261-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.261-0800: [ParNew: 78549K->78549K(78656K), 0.0000223 secs]2020-10-28T22:35:03.261-0800: [CMS: 174531K->174483K(174784K), 0.0404423 secs] 253080K->218306K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0405168 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.302-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174483K(174784K)] 219632K(253440K), 0.0002316 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.302-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.303-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.303-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.304-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.304-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.304-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.304-0800: [GC (CMS Final Remark) [YG occupancy: 53598 K (78656 K)]2020-10-28T22:35:03.304-0800: [Rescan (parallel) , 0.0004806 secs]2020-10-28T22:35:03.304-0800: [weak refs processing, 0.0000216 secs]2020-10-28T22:35:03.305-0800: [class unloading, 0.0002671 secs]2020-10-28T22:35:03.305-0800: [scrub symbol table, 0.0003508 secs]2020-10-28T22:35:03.305-0800: [scrub string table, 0.0001975 secs][1 CMS-remark: 174483K(174784K)] 228082K(253440K), 0.0014145 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.305-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.306-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.306-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.306-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.310-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.310-0800: [ParNew: 78596K->78596K(78656K), 0.0000204 secs]2020-10-28T22:35:03.310-0800: [CMS: 174483K->174779K(174784K), 0.0357833 secs] 253080K->222897K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0358524 secs] [Times: user=0.04 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.346-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174779K(174784K)] 222960K(253440K), 0.0002129 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.346-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.347-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.347-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.348-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.348-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.348-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.348-0800: [GC (CMS Final Remark) [YG occupancy: 58967 K (78656 K)]2020-10-28T22:35:03.348-0800: [Rescan (parallel) , 0.0003287 secs]2020-10-28T22:35:03.348-0800: [weak refs processing, 0.0000302 secs]2020-10-28T22:35:03.348-0800: [class unloading, 0.0002740 secs]2020-10-28T22:35:03.348-0800: [scrub symbol table, 0.0003424 secs]2020-10-28T22:35:03.349-0800: [scrub string table, 0.0001985 secs][1 CMS-remark: 174779K(174784K)] 233746K(253440K), 0.0012607 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.349-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.349-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.349-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.350-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.353-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.353-0800: [ParNew: 78638K->78638K(78656K), 0.0000255 secs]2020-10-28T22:35:03.353-0800: [CMS: 174707K->174690K(174784K), 0.0361063 secs] 253346K->226444K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0361858 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.389-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174690K(174784K)] 226582K(253440K), 0.0002051 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.389-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.390-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.390-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.391-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.391-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.391-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.391-0800: [GC (CMS Final Remark) [YG occupancy: 64330 K (78656 K)]2020-10-28T22:35:03.391-0800: [Rescan (parallel) , 0.0010916 secs]2020-10-28T22:35:03.392-0800: [weak refs processing, 0.0000196 secs]2020-10-28T22:35:03.392-0800: [class unloading, 0.0003078 secs]2020-10-28T22:35:03.393-0800: [scrub symbol table, 0.0003373 secs]2020-10-28T22:35:03.393-0800: [scrub string table, 0.0001962 secs][1 CMS-remark: 174690K(174784K)] 239020K(253440K), 0.0020179 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.393-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.394-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.394-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.394-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.398-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.398-0800: [ParNew: 78524K->78524K(78656K), 0.0000318 secs]2020-10-28T22:35:03.398-0800: [CMS: 174110K->174106K(174784K), 0.0341165 secs] 252635K->233315K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0342207 secs] [Times: user=0.03 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.432-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174106K(174784K)] 233704K(253440K), 0.0003006 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.432-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.433-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.433-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.434-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.434-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.434-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.434-0800: [GC (CMS Final Remark) [YG occupancy: 71951 K (78656 K)]2020-10-28T22:35:03.434-0800: [Rescan (parallel) , 0.0002128 secs]2020-10-28T22:35:03.435-0800: [weak refs processing, 0.0000133 secs]2020-10-28T22:35:03.435-0800: [class unloading, 0.0002412 secs]2020-10-28T22:35:03.435-0800: [scrub symbol table, 0.0003209 secs]2020-10-28T22:35:03.435-0800: [scrub string table, 0.0001947 secs][1 CMS-remark: 174106K(174784K)] 246057K(253440K), 0.0010384 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.436-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.436-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.436-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.436-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.436-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.436-0800: [ParNew: 78206K->78206K(78656K), 0.0000172 secs]2020-10-28T22:35:03.436-0800: [CMS: 173259K->174770K(174784K), 0.0379526 secs] 251465K->234332K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0380312 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.475-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174770K(174784K)] 235079K(253440K), 0.0003783 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.475-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.476-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.476-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.477-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.477-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.477-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.477-0800: [GC (CMS Final Remark) [YG occupancy: 73545 K (78656 K)]2020-10-28T22:35:03.477-0800: [Rescan (parallel) , 0.0002178 secs]2020-10-28T22:35:03.478-0800: [weak refs processing, 0.0000136 secs]2020-10-28T22:35:03.478-0800: [class unloading, 0.0002311 secs]2020-10-28T22:35:03.478-0800: [scrub symbol table, 0.0003405 secs]2020-10-28T22:35:03.478-0800: [scrub string table, 0.0002012 secs][1 CMS-remark: 174770K(174784K)] 248316K(253440K), 0.0010547 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.479-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.479-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.479-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.479-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.480-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.480-0800: [ParNew: 78636K->78636K(78656K), 0.0000180 secs]2020-10-28T22:35:03.480-0800: [CMS: 174688K->174768K(174784K), 0.0367454 secs] 253324K->237198K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0368059 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.516-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174768K(174784K)] 237877K(253440K), 0.0002120 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.517-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.518-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.518-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.519-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.519-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.519-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.519-0800: [GC (CMS Final Remark) [YG occupancy: 71670 K (78656 K)]2020-10-28T22:35:03.519-0800: [Rescan (parallel) , 0.0009362 secs]2020-10-28T22:35:03.520-0800: [weak refs processing, 0.0000188 secs]2020-10-28T22:35:03.520-0800: [class unloading, 0.0003093 secs]2020-10-28T22:35:03.520-0800: [scrub symbol table, 0.0004011 secs]2020-10-28T22:35:03.521-0800: [scrub string table, 0.0002076 secs][1 CMS-remark: 174768K(174784K)] 246439K(253440K), 0.0019415 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.521-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.521-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.521-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.521-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.522-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.522-0800: [ParNew: 78622K->78622K(78656K), 0.0000185 secs]2020-10-28T22:35:03.522-0800: [CMS: 174746K->174677K(174784K), 0.0357114 secs] 253369K->240048K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0357941 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.558-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174677K(174784K)] 240120K(253440K), 0.0002366 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.558-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.559-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.559-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.561-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2020-10-28T22:35:03.561-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:35:03.561-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.561-0800: [GC (CMS Final Remark) [YG occupancy: 75111 K (78656 K)]2020-10-28T22:35:03.561-0800: [Rescan (parallel) , 0.0009793 secs]2020-10-28T22:35:03.562-0800: [weak refs processing, 0.0000140 secs]2020-10-28T22:35:03.562-0800: [class unloading, 0.0002338 secs]2020-10-28T22:35:03.562-0800: [scrub symbol table, 0.0003306 secs]2020-10-28T22:35:03.562-0800: [scrub string table, 0.0002008 secs][1 CMS-remark: 174677K(174784K)] 249788K(253440K), 0.0018071 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.563-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:35:03.563-0800: [CMS-concurrent-sweep: 0.000/0.000 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.563-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:35:03.563-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.563-0800: [GC (Allocation Failure) 2020-10-28T22:35:03.563-0800: [ParNew: 78260K->78260K(78656K), 0.0000199 secs]2020-10-28T22:35:03.563-0800: [CMS: 174042K->174722K(174784K), 0.0342002 secs] 252303K->240562K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0342668 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.598-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174722K(174784K)] 241241K(253440K), 0.0003221 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.598-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.599-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.599-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.600-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.600-0800: [CMS2020-10-28T22:35:03.600-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+ (concurrent mode failure): 174722K->174678K(174784K), 0.0364746 secs] 253284K->239338K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0365134 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2020-10-28T22:35:03.639-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.639-0800: [CMS: 174750K->174331K(174784K), 0.0375535 secs] 253395K->243060K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0376047 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.677-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174331K(174784K)] 243658K(253440K), 0.0002557 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.677-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.678-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.678-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.679-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.679-0800: [CMS2020-10-28T22:35:03.679-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+ (concurrent mode failure): 174619K->174562K(174784K), 0.0335413 secs] 253206K->242578K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0335874 secs] [Times: user=0.03 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.715-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.715-0800: [CMS: 174562K->174539K(174784K), 0.0365157 secs] 253109K->241720K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0365658 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.752-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174539K(174784K)] 242119K(253440K), 0.0002350 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.752-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:35:03.753-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.753-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:35:03.754-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.754-0800: [CMS2020-10-28T22:35:03.754-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+ (concurrent mode failure): 174638K->174783K(174784K), 0.0380171 secs] 253222K->243062K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0381128 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.794-0800: [Full GC (Allocation Failure) 2020-10-28T22:35:03.794-0800: [CMS: 174783K->174561K(174784K), 0.0370583 secs] 253350K->243848K(253440K), [Metaspace: 2717K->2717K(1056768K)], 0.0371120 secs] [Times: user=0.04 sys=0.00, real=0.04 secs] 
+2020-10-28T22:35:03.831-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 174561K(174784K)] 244207K(253440K), 0.0002501 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:35:03.832-0800: [CMS-concurrent-mark-start]
+执行结束!共生成对象次数:4402
+Heap
+ par new generation   total 78656K, used 69952K [0x00000007b0000000, 0x00000007b5550000, 0x00000007b5550000)
+  eden space 69952K, 100% used [0x00000007b0000000, 0x00000007b4450000, 0x00000007b4450000)
+  from space 8704K,   0% used [0x00000007b4cd0000, 0x00000007b4cd0000, 0x00000007b5550000)
+  to   space 8704K,   0% used [0x00000007b4450000, 0x00000007b4450000, 0x00000007b4cd0000)
+ concurrent mark-sweep generation total 174784K, used 174561K [0x00000007b5550000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -XX:+UseConcMarkSweepGC -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:39:06.306-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.306-0800: [ParNew: 139776K->17471K(157248K), 0.0156061 secs] 139776K->46157K(506816K), 0.0156488 secs] [Times: user=0.02 sys=0.08, real=0.02 secs] 
+2020-10-28T22:39:06.339-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.339-0800: [ParNew: 157247K->17472K(157248K), 0.0213599 secs] 185933K->91193K(506816K), 0.0214099 secs] [Times: user=0.04 sys=0.09, real=0.03 secs] 
+2020-10-28T22:39:06.381-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.381-0800: [ParNew: 157248K->17472K(157248K), 0.0254513 secs] 230969K->136673K(506816K), 0.0254899 secs] [Times: user=0.16 sys=0.02, real=0.02 secs] 
+2020-10-28T22:39:06.425-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.425-0800: [ParNew: 157248K->17470K(157248K), 0.0236430 secs] 276449K->178639K(506816K), 0.0236797 secs] [Times: user=0.16 sys=0.01, real=0.02 secs] 
+2020-10-28T22:39:06.469-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.469-0800: [ParNew: 157246K->17469K(157248K), 0.0236894 secs] 318415K->221056K(506816K), 0.0237565 secs] [Times: user=0.16 sys=0.01, real=0.03 secs] 
+2020-10-28T22:39:06.493-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 203587K(349568K)] 221370K(506816K), 0.0003497 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.494-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:06.495-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.495-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:06.496-0800: [CMS-concurrent-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.496-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:06.512-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.513-0800: [ParNew: 157173K->17470K(157248K), 0.0211797 secs] 360760K->259480K(506816K), 0.0212164 secs] [Times: user=0.14 sys=0.02, real=0.02 secs] 
+2020-10-28T22:39:06.556-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.556-0800: [ParNew: 157246K->17471K(157248K), 0.0223283 secs] 399256K->300675K(506816K), 0.0223662 secs] [Times: user=0.12 sys=0.01, real=0.02 secs] 
+2020-10-28T22:39:06.597-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.597-0800: [ParNew: 157247K->17470K(157248K), 0.0266061 secs] 440451K->343340K(506816K), 0.0266501 secs] [Times: user=0.17 sys=0.01, real=0.03 secs] 
+2020-10-28T22:39:06.624-0800: [CMS-concurrent-abortable-preclean: 0.004/0.128 secs] [Times: user=0.49 sys=0.04, real=0.13 secs] 
+2020-10-28T22:39:06.624-0800: [GC (CMS Final Remark) [YG occupancy: 25721 K (157248 K)]2020-10-28T22:39:06.624-0800: [Rescan (parallel) , 0.0002566 secs]2020-10-28T22:39:06.625-0800: [weak refs processing, 0.0004140 secs]2020-10-28T22:39:06.625-0800: [class unloading, 0.0002265 secs]2020-10-28T22:39:06.625-0800: [scrub symbol table, 0.0002935 secs]2020-10-28T22:39:06.626-0800: [scrub string table, 0.0001414 secs][1 CMS-remark: 325870K(349568K)] 351591K(506816K), 0.0013986 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.626-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:39:06.627-0800: [CMS-concurrent-sweep: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.627-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:39:06.628-0800: [CMS-concurrent-reset: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.644-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.644-0800: [ParNew: 157246K->17471K(157248K), 0.0142933 secs] 440551K->345830K(506816K), 0.0143811 secs] [Times: user=0.07 sys=0.01, real=0.01 secs] 
+2020-10-28T22:39:06.659-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 328359K(349568K)] 346093K(506816K), 0.0001694 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.659-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:06.660-0800: [CMS-concurrent-mark: 0.002/0.002 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:39:06.660-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:06.661-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.661-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:06.661-0800: [CMS-concurrent-abortable-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.661-0800: [GC (CMS Final Remark) [YG occupancy: 34806 K (157248 K)]2020-10-28T22:39:06.661-0800: [Rescan (parallel) , 0.0008280 secs]2020-10-28T22:39:06.662-0800: [weak refs processing, 0.0000090 secs]2020-10-28T22:39:06.662-0800: [class unloading, 0.0001949 secs]2020-10-28T22:39:06.662-0800: [scrub symbol table, 0.0002647 secs]2020-10-28T22:39:06.663-0800: [scrub string table, 0.0001400 secs][1 CMS-remark: 328359K(349568K)] 363165K(506816K), 0.0014727 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.663-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:39:06.663-0800: [CMS-concurrent-sweep: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.664-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:39:06.664-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.679-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.679-0800: [ParNew: 157247K->17471K(157248K), 0.0118600 secs] 388245K->287320K(506816K), 0.0118956 secs] [Times: user=0.08 sys=0.00, real=0.02 secs] 
+2020-10-28T22:39:06.691-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 269848K(349568K)] 287819K(506816K), 0.0001863 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.691-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:06.692-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.692-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:06.693-0800: [CMS-concurrent-preclean: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.693-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:06.709-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.709-0800: [ParNew: 157247K->17471K(157248K), 0.0140789 secs] 427096K->332897K(506816K), 0.0141143 secs] [Times: user=0.09 sys=0.00, real=0.02 secs] 
+2020-10-28T22:39:06.740-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.740-0800: [ParNew: 157247K->157247K(157248K), 0.0000187 secs]2020-10-28T22:39:06.740-0800: [CMS2020-10-28T22:39:06.740-0800: [CMS-concurrent-abortable-preclean: 0.002/0.047 secs] [Times: user=0.13 sys=0.00, real=0.05 secs] 
+ (concurrent mode failure): 315425K->282816K(349568K), 0.0568334 secs] 472673K->282816K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0569352 secs] [Times: user=0.06 sys=0.00, real=0.05 secs] 
+2020-10-28T22:39:06.816-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.816-0800: [ParNew: 139486K->17469K(157248K), 0.0069749 secs] 422303K->327783K(506816K), 0.0070163 secs] [Times: user=0.04 sys=0.00, real=0.01 secs] 
+2020-10-28T22:39:06.823-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 310313K(349568K)] 328278K(506816K), 0.0001497 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.823-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:06.824-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.824-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:06.825-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.825-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:06.840-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.840-0800: [ParNew (promotion failed): 157245K->157247K(157248K), 0.0192812 secs]2020-10-28T22:39:06.860-0800: [CMS2020-10-28T22:39:06.860-0800: [CMS-concurrent-abortable-preclean: 0.001/0.035 secs] [Times: user=0.14 sys=0.01, real=0.04 secs] 
+ (concurrent mode failure): 349359K->304332K(349568K), 0.0521789 secs] 467559K->304332K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0715135 secs] [Times: user=0.17 sys=0.01, real=0.07 secs] 
+2020-10-28T22:39:06.932-0800: [GC (Allocation Failure) 2020-10-28T22:39:06.932-0800: [ParNew: 139776K->139776K(157248K), 0.0000220 secs]2020-10-28T22:39:06.932-0800: [CMS: 304332K->309045K(349568K), 0.0495754 secs] 444108K->309045K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0496538 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+2020-10-28T22:39:06.982-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 309045K(349568K)] 309333K(506816K), 0.0002290 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.983-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:06.984-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.984-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:06.984-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:06.984-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:07.002-0800: [GC (Allocation Failure) 2020-10-28T22:39:07.002-0800: [ParNew: 139776K->17470K(157248K), 0.0068017 secs] 448821K->357702K(506816K), 0.0068425 secs] [Times: user=0.04 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.009-0800: [CMS-concurrent-abortable-preclean: 0.001/0.025 secs] [Times: user=0.06 sys=0.00, real=0.02 secs] 
+2020-10-28T22:39:07.009-0800: [GC (CMS Final Remark) [YG occupancy: 17655 K (157248 K)]2020-10-28T22:39:07.009-0800: [Rescan (parallel) , 0.0008699 secs]2020-10-28T22:39:07.010-0800: [weak refs processing, 0.0000140 secs]2020-10-28T22:39:07.010-0800: [class unloading, 0.0002344 secs]2020-10-28T22:39:07.010-0800: [scrub symbol table, 0.0003381 secs]2020-10-28T22:39:07.011-0800: [scrub string table, 0.0001869 secs][1 CMS-remark: 340232K(349568K)] 357887K(506816K), 0.0016920 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-28T22:39:07.011-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:39:07.012-0800: [CMS-concurrent-sweep: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.012-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:39:07.012-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.032-0800: [GC (Allocation Failure) 2020-10-28T22:39:07.032-0800: [ParNew: 157246K->157246K(157248K), 0.0000530 secs]2020-10-28T22:39:07.032-0800: [CMS: 339834K->315274K(349568K), 0.0513507 secs] 497081K->315274K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0515064 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+2020-10-28T22:39:07.083-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 315274K(349568K)] 315488K(506816K), 0.0001640 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.084-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:07.085-0800: [CMS-concurrent-mark: 0.002/0.002 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.085-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:07.086-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.086-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:07.103-0800: [GC (Allocation Failure) 2020-10-28T22:39:07.103-0800: [ParNew: 139776K->17471K(157248K), 0.0064345 secs] 455050K->361160K(506816K), 0.0064844 secs] [Times: user=0.05 sys=0.00, real=0.01 secs] 
+2020-10-28T22:39:07.110-0800: [CMS-concurrent-abortable-preclean: 0.001/0.024 secs] [Times: user=0.06 sys=0.00, real=0.03 secs] 
+2020-10-28T22:39:07.110-0800: [GC (CMS Final Remark) [YG occupancy: 20536 K (157248 K)]2020-10-28T22:39:07.110-0800: [Rescan (parallel) , 0.0010205 secs]2020-10-28T22:39:07.111-0800: [weak refs processing, 0.0000125 secs]2020-10-28T22:39:07.111-0800: [class unloading, 0.0002352 secs]2020-10-28T22:39:07.111-0800: [scrub symbol table, 0.0003066 secs]2020-10-28T22:39:07.112-0800: [scrub string table, 0.0001848 secs][1 CMS-remark: 343689K(349568K)] 364225K(506816K), 0.0018146 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.112-0800: [CMS-concurrent-sweep-start]
+2020-10-28T22:39:07.113-0800: [CMS-concurrent-sweep: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.113-0800: [CMS-concurrent-reset-start]
+2020-10-28T22:39:07.113-0800: [CMS-concurrent-reset: 0.000/0.000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.131-0800: [GC (Allocation Failure) 2020-10-28T22:39:07.131-0800: [ParNew: 157247K->157247K(157248K), 0.0000590 secs]2020-10-28T22:39:07.131-0800: [CMS: 343593K->323130K(349568K), 0.0526635 secs] 500840K->323130K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0528447 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+2020-10-28T22:39:07.184-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 323130K(349568K)] 323900K(506816K), 0.0002000 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.185-0800: [CMS-concurrent-mark-start]
+2020-10-28T22:39:07.186-0800: [CMS-concurrent-mark: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.186-0800: [CMS-concurrent-preclean-start]
+2020-10-28T22:39:07.187-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2020-10-28T22:39:07.187-0800: [CMS-concurrent-abortable-preclean-start]
+2020-10-28T22:39:07.205-0800: [GC (Allocation Failure) 2020-10-28T22:39:07.205-0800: [ParNew: 139776K->139776K(157248K), 0.0000260 secs]2020-10-28T22:39:07.205-0800: [CMS2020-10-28T22:39:07.205-0800: [CMS-concurrent-abortable-preclean: 0.001/0.018 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+ (concurrent mode failure): 323130K->335593K(349568K), 0.0531800 secs] 462906K->335593K(506816K), [Metaspace: 2717K->2717K(1056768K)], 0.0533296 secs] [Times: user=0.05 sys=0.01, real=0.05 secs] 
+执行结束!共生成对象次数:10549
+Heap
+ par new generation   total 157248K, used 5610K [0x00000007a0000000, 0x00000007aaaa0000, 0x00000007aaaa0000)
+  eden space 139776K,   4% used [0x00000007a0000000, 0x00000007a057a9e0, 0x00000007a8880000)
+  from space 17472K,   0% used [0x00000007a9990000, 0x00000007a9990000, 0x00000007aaaa0000)
+  to   space 17472K,   0% used [0x00000007a8880000, 0x00000007a8880000, 0x00000007a9990000)
+ concurrent mark-sweep generation total 349568K, used 335593K [0x00000007aaaa0000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -XX:+UseConcMarkSweepGC -Xms2g -Xmx2g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:39:51.193-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.193-0800: [ParNew: 545344K->68095K(613440K), 0.0575710 secs] 545344K->142455K(2029056K), 0.0576212 secs] [Times: user=0.08 sys=0.17, real=0.06 secs] 
+2020-10-28T22:39:51.340-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.340-0800: [ParNew: 613439K->68096K(613440K), 0.0797184 secs] 687799K->264583K(2029056K), 0.0797808 secs] [Times: user=0.12 sys=0.14, real=0.08 secs] 
+2020-10-28T22:39:51.484-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.484-0800: [ParNew: 613440K->68096K(613440K), 0.0776037 secs] 809927K->385348K(2029056K), 0.0777275 secs] [Times: user=0.43 sys=0.04, real=0.08 secs] 
+2020-10-28T22:39:51.628-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.628-0800: [ParNew: 613440K->68096K(613440K), 0.0776046 secs] 930692K->508392K(2029056K), 0.0776442 secs] [Times: user=0.47 sys=0.03, real=0.08 secs] 
+2020-10-28T22:39:51.774-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.774-0800: [ParNew: 613440K->68095K(613440K), 0.0680479 secs] 1053736K->623354K(2029056K), 0.0680836 secs] [Times: user=0.42 sys=0.03, real=0.07 secs] 
+2020-10-28T22:39:51.906-0800: [GC (Allocation Failure) 2020-10-28T22:39:51.906-0800: [ParNew: 613439K->68096K(613440K), 0.0683450 secs] 1168698K->740401K(2029056K), 0.0683858 secs] [Times: user=0.40 sys=0.04, real=0.07 secs] 
+执行结束!共生成对象次数:12169
+Heap
+ par new generation   total 613440K, used 90064K [0x0000000740000000, 0x0000000769990000, 0x0000000769990000)
+  eden space 545344K,   4% used [0x0000000740000000, 0x00000007415742e8, 0x0000000761490000)
+  from space 68096K, 100% used [0x0000000761490000, 0x0000000765710000, 0x0000000765710000)
+  to   space 68096K,   0% used [0x0000000765710000, 0x0000000765710000, 0x0000000769990000)
+ concurrent mark-sweep generation total 1415616K, used 672305K [0x0000000769990000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+java -XX:+UseConcMarkSweepGC -Xms4g -Xmx4g -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:40:28.699-0800: [GC (Allocation Failure) 2020-10-28T22:40:28.699-0800: [ParNew: 545344K->68096K(613440K), 0.0513675 secs] 545344K->146893K(4126208K), 0.0514089 secs] [Times: user=0.10 sys=0.22, real=0.06 secs] 
+2020-10-28T22:40:28.826-0800: [GC (Allocation Failure) 2020-10-28T22:40:28.826-0800: [ParNew: 613440K->68096K(613440K), 0.0533149 secs] 692237K->265339K(4126208K), 0.0533514 secs] [Times: user=0.11 sys=0.24, real=0.05 secs] 
+2020-10-28T22:40:28.946-0800: [GC (Allocation Failure) 2020-10-28T22:40:28.946-0800: [ParNew: 613440K->68096K(613440K), 0.0686489 secs] 810683K->387655K(4126208K), 0.0686874 secs] [Times: user=0.49 sys=0.04, real=0.07 secs] 
+2020-10-28T22:40:29.072-0800: [GC (Allocation Failure) 2020-10-28T22:40:29.072-0800: [ParNew: 613440K->68094K(613440K), 0.0767376 secs] 932999K->512300K(4126208K), 0.0768144 secs] [Times: user=0.53 sys=0.04, real=0.07 secs] 
+2020-10-28T22:40:29.209-0800: [GC (Allocation Failure) 2020-10-28T22:40:29.209-0800: [ParNew: 613438K->68095K(613440K), 0.0740722 secs] 1057644K->637175K(4126208K), 0.0741224 secs] [Times: user=0.53 sys=0.04, real=0.08 secs] 
+2020-10-28T22:40:29.343-0800: [GC (Allocation Failure) 2020-10-28T22:40:29.343-0800: [ParNew: 613439K->68096K(613440K), 0.0771495 secs] 1182519K->760007K(4126208K), 0.0771977 secs] [Times: user=0.55 sys=0.03, real=0.08 secs] 
+执行结束!共生成对象次数:13577
+Heap
+ par new generation   total 613440K, used 348838K [0x00000006c0000000, 0x00000006e9990000, 0x00000006e9990000)
+  eden space 545344K,  51% used [0x00000006c0000000, 0x00000006d1229bc0, 0x00000006e1490000)
+  from space 68096K, 100% used [0x00000006e1490000, 0x00000006e5710000, 0x00000006e5710000)
+  to   space 68096K,   0% used [0x00000006e5710000, 0x00000006e5710000, 0x00000006e9990000)
+ concurrent mark-sweep generation total 3512768K, used 691911K [0x00000006e9990000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2723K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
+
+CMSGC 在堆内存较小的阶段执行GC的次数比较多，随着堆内存的增大，GC次数逐渐减小；CMSGC 年轻代用串性GC，老年代用CMSGC；
+CMSGC 有六个阶段：
+阶段 1:Initial Mark(初始标记)
+阶段 2:Concurrent Mark(并发标记)
+阶段 3:Concurrent Preclean(并发预清理) 
+阶段 4: Final Remark(最终标记)
+阶段 5: Concurrent Sweep(并发清除) 
+阶段 6: Concurrent Reset(并发重置)
+只有第一个阶段和第四个阶段会STW，但是随着堆内存的增大，STW时间也会变大，不太可控；CMS在堆内存512m之后，生成对象次数增加不是特别明显
+
+---
+##### G1GC
+java -XX:+UseG1GC -Xms512m -Xmx512m -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:44:43.130-0800: [GC pause (G1 Evacuation Pause) (young) 30M->9354K(512M), 0.0083992 secs]
+2020-10-28T22:44:43.153-0800: [GC pause (G1 Evacuation Pause) (young) 45M->22M(512M), 0.0046026 secs]
+2020-10-28T22:44:43.169-0800: [GC pause (G1 Evacuation Pause) (young) 65M->34M(512M), 0.0063902 secs]
+2020-10-28T22:44:43.280-0800: [GC pause (G1 Evacuation Pause) (young) 282M->113M(512M), 0.0177941 secs]
+2020-10-28T22:44:43.306-0800: [GC pause (G1 Evacuation Pause) (young) 175M->131M(512M), 0.0057980 secs]
+2020-10-28T22:44:43.338-0800: [GC pause (G1 Evacuation Pause) (young) 266M->166M(512M), 0.0114960 secs]
+2020-10-28T22:44:43.381-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 347M->221M(512M), 0.0114954 secs]
+2020-10-28T22:44:43.393-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.393-0800: [GC concurrent-root-region-scan-end, 0.0001414 secs]
+2020-10-28T22:44:43.393-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.394-0800: [GC concurrent-mark-end, 0.0012577 secs]
+2020-10-28T22:44:43.394-0800: [GC remark, 0.0013564 secs]
+2020-10-28T22:44:43.396-0800: [GC cleanup 232M->232M(512M), 0.0005264 secs]
+2020-10-28T22:44:43.432-0800: [GC pause (G1 Evacuation Pause) (young)-- 424M->361M(512M), 0.0042952 secs]
+2020-10-28T22:44:43.438-0800: [GC pause (G1 Evacuation Pause) (mixed) 369M->350M(512M), 0.0074470 secs]
+2020-10-28T22:44:43.446-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 350M->350M(512M), 0.0010309 secs]
+2020-10-28T22:44:43.447-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.447-0800: [GC concurrent-root-region-scan-end, 0.0001383 secs]
+2020-10-28T22:44:43.447-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.448-0800: [GC concurrent-mark-end, 0.0008563 secs]
+2020-10-28T22:44:43.448-0800: [GC remark, 0.0011177 secs]
+2020-10-28T22:44:43.449-0800: [GC cleanup 358M->357M(512M), 0.0004770 secs]
+2020-10-28T22:44:43.449-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:44:43.449-0800: [GC concurrent-cleanup-end, 0.0000138 secs]
+2020-10-28T22:44:43.457-0800: [GC pause (G1 Evacuation Pause) (young) 411M->370M(512M), 0.0022424 secs]
+2020-10-28T22:44:43.461-0800: [GC pause (G1 Evacuation Pause) (mixed) 390M->325M(512M), 0.0018380 secs]
+2020-10-28T22:44:43.467-0800: [GC pause (G1 Evacuation Pause) (mixed) 354M->295M(512M), 0.0032316 secs]
+2020-10-28T22:44:43.474-0800: [GC pause (G1 Evacuation Pause) (mixed) 325M->284M(512M), 0.0033635 secs]
+2020-10-28T22:44:43.478-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 289M->285M(512M), 0.0009262 secs]
+2020-10-28T22:44:43.479-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.479-0800: [GC concurrent-root-region-scan-end, 0.0000783 secs]
+2020-10-28T22:44:43.479-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.480-0800: [GC concurrent-mark-end, 0.0007364 secs]
+2020-10-28T22:44:43.480-0800: [GC remark, 0.0011566 secs]
+2020-10-28T22:44:43.481-0800: [GC cleanup 293M->293M(512M), 0.0005360 secs]
+2020-10-28T22:44:43.500-0800: [GC pause (G1 Evacuation Pause) (young) 408M->318M(512M), 0.0041665 secs]
+2020-10-28T22:44:43.508-0800: [GC pause (G1 Evacuation Pause) (mixed) 333M->302M(512M), 0.0051186 secs]
+2020-10-28T22:44:43.514-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 303M->302M(512M), 0.0021779 secs]
+2020-10-28T22:44:43.516-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.516-0800: [GC concurrent-root-region-scan-end, 0.0000790 secs]
+2020-10-28T22:44:43.516-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.517-0800: [GC concurrent-mark-end, 0.0009809 secs]
+2020-10-28T22:44:43.517-0800: [GC remark, 0.0019822 secs]
+2020-10-28T22:44:43.519-0800: [GC cleanup 310M->309M(512M), 0.0006743 secs]
+2020-10-28T22:44:43.520-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:44:43.520-0800: [GC concurrent-cleanup-end, 0.0000141 secs]
+2020-10-28T22:44:43.534-0800: [GC pause (G1 Evacuation Pause) (young) 413M->334M(512M), 0.0039032 secs]
+2020-10-28T22:44:43.542-0800: [GC pause (G1 Evacuation Pause) (mixed) 350M->312M(512M), 0.0053526 secs]
+2020-10-28T22:44:43.548-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 314M->312M(512M), 0.0011018 secs]
+2020-10-28T22:44:43.549-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.549-0800: [GC concurrent-root-region-scan-end, 0.0001181 secs]
+2020-10-28T22:44:43.549-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.550-0800: [GC concurrent-mark-end, 0.0009469 secs]
+2020-10-28T22:44:43.550-0800: [GC remark, 0.0012244 secs]
+2020-10-28T22:44:43.552-0800: [GC cleanup 321M->321M(512M), 0.0005833 secs]
+2020-10-28T22:44:43.565-0800: [GC pause (G1 Evacuation Pause) (young) 398M->336M(512M), 0.0026670 secs]
+2020-10-28T22:44:43.571-0800: [GC pause (G1 Evacuation Pause) (mixed) 358M->321M(512M), 0.0081718 secs]
+2020-10-28T22:44:43.579-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 322M->321M(512M), 0.0009289 secs]
+2020-10-28T22:44:43.580-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.580-0800: [GC concurrent-root-region-scan-end, 0.0000835 secs]
+2020-10-28T22:44:43.580-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.581-0800: [GC concurrent-mark-end, 0.0008701 secs]
+2020-10-28T22:44:43.581-0800: [GC remark, 0.0014462 secs]
+2020-10-28T22:44:43.583-0800: [GC cleanup 329M->329M(512M), 0.0005579 secs]
+2020-10-28T22:44:43.596-0800: [GC pause (G1 Evacuation Pause) (young) 406M->347M(512M), 0.0034021 secs]
+2020-10-28T22:44:43.602-0800: [GC pause (G1 Evacuation Pause) (mixed) 364M->330M(512M), 0.0062323 secs]
+2020-10-28T22:44:43.608-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 330M->330M(512M), 0.0024572 secs]
+2020-10-28T22:44:43.611-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.611-0800: [GC concurrent-root-region-scan-end, 0.0000889 secs]
+2020-10-28T22:44:43.611-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.612-0800: [GC concurrent-mark-end, 0.0008592 secs]
+2020-10-28T22:44:43.612-0800: [GC remark, 0.0014316 secs]
+2020-10-28T22:44:43.613-0800: [GC cleanup 337M->337M(512M), 0.0006211 secs]
+2020-10-28T22:44:43.626-0800: [GC pause (G1 Evacuation Pause) (young) 412M->357M(512M), 0.0024819 secs]
+2020-10-28T22:44:43.631-0800: [GC pause (G1 Evacuation Pause) (mixed) 377M->342M(512M), 0.0049209 secs]
+2020-10-28T22:44:43.636-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 345M->342M(512M), 0.0025414 secs]
+2020-10-28T22:44:43.639-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.639-0800: [GC concurrent-root-region-scan-end, 0.0000927 secs]
+2020-10-28T22:44:43.639-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.640-0800: [GC concurrent-mark-end, 0.0008315 secs]
+2020-10-28T22:44:43.640-0800: [GC remark, 0.0020931 secs]
+2020-10-28T22:44:43.642-0800: [GC cleanup 348M->348M(512M), 0.0005859 secs]
+2020-10-28T22:44:43.653-0800: [GC pause (G1 Evacuation Pause) (young) 413M->362M(512M), 0.0034385 secs]
+2020-10-28T22:44:43.661-0800: [GC pause (G1 Evacuation Pause) (mixed) 387M->352M(512M), 0.0044794 secs]
+2020-10-28T22:44:43.666-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 356M->353M(512M), 0.0010738 secs]
+2020-10-28T22:44:43.667-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.668-0800: [GC concurrent-root-region-scan-end, 0.0000654 secs]
+2020-10-28T22:44:43.668-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.668-0800: [GC concurrent-mark-end, 0.0009140 secs]
+2020-10-28T22:44:43.669-0800: [GC remark, 0.0013005 secs]
+2020-10-28T22:44:43.670-0800: [GC cleanup 358M->358M(512M), 0.0006033 secs]
+2020-10-28T22:44:43.678-0800: [GC pause (G1 Evacuation Pause) (young) 405M->364M(512M), 0.0030520 secs]
+2020-10-28T22:44:43.684-0800: [GC pause (G1 Evacuation Pause) (mixed) 388M->353M(512M), 0.0055473 secs]
+2020-10-28T22:44:43.696-0800: [GC pause (G1 Evacuation Pause) (mixed) 375M->359M(512M), 0.0016004 secs]
+2020-10-28T22:44:43.698-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 363M->360M(512M), 0.0011346 secs]
+2020-10-28T22:44:43.699-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.699-0800: [GC concurrent-root-region-scan-end, 0.0000858 secs]
+2020-10-28T22:44:43.699-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.700-0800: [GC concurrent-mark-end, 0.0008488 secs]
+2020-10-28T22:44:43.700-0800: [GC remark, 0.0012442 secs]
+2020-10-28T22:44:43.701-0800: [GC cleanup 368M->368M(512M), 0.0005592 secs]
+2020-10-28T22:44:43.707-0800: [GC pause (G1 Evacuation Pause) (young) 402M->369M(512M), 0.0017473 secs]
+2020-10-28T22:44:43.712-0800: [GC pause (G1 Evacuation Pause) (mixed) 395M->359M(512M), 0.0045762 secs]
+2020-10-28T22:44:43.717-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 359M->358M(512M), 0.0033067 secs]
+2020-10-28T22:44:43.720-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.720-0800: [GC concurrent-root-region-scan-end, 0.0000317 secs]
+2020-10-28T22:44:43.720-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.721-0800: [GC concurrent-mark-end, 0.0010355 secs]
+2020-10-28T22:44:43.721-0800: [GC remark, 0.0024007 secs]
+2020-10-28T22:44:43.724-0800: [GC cleanup 366M->365M(512M), 0.0006503 secs]
+2020-10-28T22:44:43.725-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:44:43.725-0800: [GC concurrent-cleanup-end, 0.0000131 secs]
+2020-10-28T22:44:43.731-0800: [GC pause (G1 Evacuation Pause) (young) 408M->373M(512M), 0.0017516 secs]
+2020-10-28T22:44:43.736-0800: [GC pause (G1 Evacuation Pause) (mixed) 396M->364M(512M), 0.0077641 secs]
+2020-10-28T22:44:43.745-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 368M->364M(512M), 0.0017988 secs]
+2020-10-28T22:44:43.747-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.747-0800: [GC concurrent-root-region-scan-end, 0.0000706 secs]
+2020-10-28T22:44:43.747-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.748-0800: [GC concurrent-mark-end, 0.0010771 secs]
+2020-10-28T22:44:43.748-0800: [GC remark, 0.0014622 secs]
+2020-10-28T22:44:43.750-0800: [GC cleanup 369M->369M(512M), 0.0007234 secs]
+2020-10-28T22:44:43.756-0800: [GC pause (G1 Evacuation Pause) (young) 406M->372M(512M), 0.0043363 secs]
+2020-10-28T22:44:43.764-0800: [GC pause (G1 Evacuation Pause) (mixed) 399M->362M(512M), 0.0053424 secs]
+2020-10-28T22:44:43.770-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 362M->361M(512M), 0.0020550 secs]
+2020-10-28T22:44:43.772-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.772-0800: [GC concurrent-root-region-scan-end, 0.0000504 secs]
+2020-10-28T22:44:43.772-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.773-0800: [GC concurrent-mark-end, 0.0013112 secs]
+2020-10-28T22:44:43.773-0800: [GC remark, 0.0021466 secs]
+2020-10-28T22:44:43.776-0800: [GC cleanup 370M->370M(512M), 0.0007826 secs]
+2020-10-28T22:44:43.783-0800: [GC pause (G1 Evacuation Pause) (young) 414M->377M(512M), 0.0021357 secs]
+2020-10-28T22:44:43.789-0800: [GC pause (G1 Evacuation Pause) (mixed) 403M->373M(512M), 0.0042502 secs]
+2020-10-28T22:44:43.794-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 375M->374M(512M), 0.0011403 secs]
+2020-10-28T22:44:43.795-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.795-0800: [GC concurrent-root-region-scan-end, 0.0000670 secs]
+2020-10-28T22:44:43.795-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.796-0800: [GC concurrent-mark-end, 0.0008982 secs]
+2020-10-28T22:44:43.796-0800: [GC remark, 0.0016199 secs]
+2020-10-28T22:44:43.798-0800: [GC cleanup 379M->379M(512M), 0.0007009 secs]
+2020-10-28T22:44:43.802-0800: [GC pause (G1 Evacuation Pause) (young) 405M->381M(512M), 0.0019120 secs]
+2020-10-28T22:44:43.808-0800: [GC pause (G1 Evacuation Pause) (mixed) 407M->367M(512M), 0.0042465 secs]
+2020-10-28T22:44:43.815-0800: [GC pause (G1 Evacuation Pause) (mixed) 392M->371M(512M), 0.0024142 secs]
+2020-10-28T22:44:43.818-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 372M->371M(512M), 0.0018018 secs]
+2020-10-28T22:44:43.820-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.820-0800: [GC concurrent-root-region-scan-end, 0.0000635 secs]
+2020-10-28T22:44:43.820-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.821-0800: [GC concurrent-mark-end, 0.0011849 secs]
+2020-10-28T22:44:43.821-0800: [GC remark, 0.0024425 secs]
+2020-10-28T22:44:43.824-0800: [GC cleanup 379M->379M(512M), 0.0009275 secs]
+2020-10-28T22:44:43.829-0800: [GC pause (G1 Evacuation Pause) (young) 402M->380M(512M), 0.0020603 secs]
+2020-10-28T22:44:43.834-0800: [GC pause (G1 Evacuation Pause) (mixed) 405M->370M(512M), 0.0052493 secs]
+2020-10-28T22:44:43.840-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 372M->370M(512M), 0.0025438 secs]
+2020-10-28T22:44:43.842-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.843-0800: [GC concurrent-root-region-scan-end, 0.0000304 secs]
+2020-10-28T22:44:43.843-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.844-0800: [GC concurrent-mark-end, 0.0010808 secs]
+2020-10-28T22:44:43.844-0800: [GC remark, 0.0017061 secs]
+2020-10-28T22:44:43.846-0800: [GC cleanup 380M->380M(512M), 0.0006910 secs]
+2020-10-28T22:44:43.850-0800: [GC pause (G1 Evacuation Pause) (young) 408M->384M(512M), 0.0027330 secs]
+2020-10-28T22:44:43.856-0800: [GC pause (G1 Evacuation Pause) (mixed) 408M->379M(512M), 0.0069836 secs]
+2020-10-28T22:44:43.863-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 380M->379M(512M), 0.0017162 secs]
+2020-10-28T22:44:43.865-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.865-0800: [GC concurrent-root-region-scan-end, 0.0000555 secs]
+2020-10-28T22:44:43.865-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.866-0800: [GC concurrent-mark-end, 0.0008645 secs]
+2020-10-28T22:44:43.866-0800: [GC remark, 0.0016378 secs]
+2020-10-28T22:44:43.867-0800: [GC cleanup 385M->385M(512M), 0.0006895 secs]
+2020-10-28T22:44:43.872-0800: [GC pause (G1 Evacuation Pause) (young) 411M->390M(512M), 0.0023851 secs]
+2020-10-28T22:44:43.878-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 415M->385M(512M), 0.0057389 secs]
+2020-10-28T22:44:43.884-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 388M->387M(512M), 0.0022527 secs]
+2020-10-28T22:44:43.886-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.887-0800: [GC concurrent-root-region-scan-end, 0.0000388 secs]
+2020-10-28T22:44:43.887-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.887-0800: [GC concurrent-mark-end, 0.0008794 secs]
+2020-10-28T22:44:43.888-0800: [GC remark, 0.0017739 secs]
+2020-10-28T22:44:43.889-0800: [GC cleanup 395M->395M(512M), 0.0005983 secs]
+2020-10-28T22:44:43.893-0800: [GC pause (G1 Evacuation Pause) (young) 415M->392M(512M), 0.0023651 secs]
+2020-10-28T22:44:43.898-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 419M->401M(512M), 0.0045214 secs]
+2020-10-28T22:44:43.904-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 406M->401M(512M), 0.0016876 secs]
+2020-10-28T22:44:43.905-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.906-0800: [GC concurrent-root-region-scan-end, 0.0000872 secs]
+2020-10-28T22:44:43.906-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.907-0800: [GC concurrent-mark-end, 0.0018336 secs]
+2020-10-28T22:44:43.908-0800: [GC remark, 0.0024530 secs]
+2020-10-28T22:44:43.910-0800: [GC cleanup 408M->408M(512M), 0.0006291 secs]
+2020-10-28T22:44:43.914-0800: [GC pause (G1 Evacuation Pause) (young) 431M->411M(512M), 0.0018429 secs]
+2020-10-28T22:44:43.920-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 437M->421M(512M), 0.0036910 secs]
+2020-10-28T22:44:43.927-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 448M->442M(512M), 0.0020091 secs]
+2020-10-28T22:44:43.929-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 442M->442M(512M), 0.0018351 secs]
+2020-10-28T22:44:43.931-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.931-0800: [GC concurrent-root-region-scan-end, 0.0000620 secs]
+2020-10-28T22:44:43.931-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.932-0800: [GC concurrent-mark-end, 0.0008249 secs]
+2020-10-28T22:44:43.932-0800: [GC remark, 0.0011919 secs]
+2020-10-28T22:44:43.933-0800: [GC cleanup 448M->448M(512M), 0.0004607 secs]
+2020-10-28T22:44:43.934-0800: [GC pause (G1 Humongous Allocation) (young)-- 451M->448M(512M), 0.0018669 secs]
+2020-10-28T22:44:43.937-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 452M->450M(512M), 0.0007551 secs]
+2020-10-28T22:44:43.938-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 452M->452M(512M), 0.0014218 secs]
+2020-10-28T22:44:43.939-0800: [Full GC (Allocation Failure)  452M->335M(512M), 0.0414642 secs]
+2020-10-28T22:44:43.981-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 337M->336M(512M), 0.0016747 secs]
+2020-10-28T22:44:43.983-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.983-0800: [GC concurrent-root-region-scan-end, 0.0000777 secs]
+2020-10-28T22:44:43.983-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.984-0800: [GC concurrent-mark-end, 0.0007540 secs]
+2020-10-28T22:44:43.984-0800: [GC remark, 0.0017427 secs]
+2020-10-28T22:44:43.985-0800: [GC cleanup 340M->340M(512M), 0.0005884 secs]
+2020-10-28T22:44:43.991-0800: [GC pause (G1 Evacuation Pause) (young) 369M->349M(512M), 0.0026850 secs]
+2020-10-28T22:44:43.994-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 354M->350M(512M), 0.0017348 secs]
+2020-10-28T22:44:43.996-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:43.996-0800: [GC concurrent-root-region-scan-end, 0.0000841 secs]
+2020-10-28T22:44:43.996-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:43.997-0800: [GC concurrent-mark-end, 0.0007953 secs]
+2020-10-28T22:44:43.997-0800: [GC remark, 0.0018169 secs]
+2020-10-28T22:44:43.999-0800: [GC cleanup 355M->355M(512M), 0.0006301 secs]
+2020-10-28T22:44:44.003-0800: [GC pause (G1 Evacuation Pause) (young) 377M->355M(512M), 0.0031178 secs]
+2020-10-28T22:44:44.011-0800: [GC pause (G1 Evacuation Pause) (mixed) 387M->361M(512M), 0.0029364 secs]
+2020-10-28T22:44:44.014-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 362M->362M(512M), 0.0013207 secs]
+2020-10-28T22:44:44.015-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:44.015-0800: [GC concurrent-root-region-scan-end, 0.0000100 secs]
+2020-10-28T22:44:44.015-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:44.016-0800: [GC concurrent-mark-end, 0.0007843 secs]
+2020-10-28T22:44:44.016-0800: [GC remark, 0.0022948 secs]
+2020-10-28T22:44:44.019-0800: [GC cleanup 369M->369M(512M), 0.0007142 secs]
+2020-10-28T22:44:44.023-0800: [GC pause (G1 Evacuation Pause) (young) 393M->370M(512M), 0.0028379 secs]
+2020-10-28T22:44:44.029-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 398M->397M(512M), 0.0033072 secs]
+2020-10-28T22:44:44.033-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 405M->399M(512M), 0.0019678 secs]
+2020-10-28T22:44:44.035-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:44.035-0800: [GC concurrent-root-region-scan-end, 0.0000773 secs]
+2020-10-28T22:44:44.035-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:44.036-0800: [GC concurrent-mark-end, 0.0007579 secs]
+2020-10-28T22:44:44.036-0800: [GC remark, 0.0012614 secs]
+2020-10-28T22:44:44.037-0800: [GC cleanup 405M->405M(512M), 0.0005333 secs]
+2020-10-28T22:44:44.040-0800: [GC pause (G1 Evacuation Pause) (young)-- 415M->410M(512M), 0.0023662 secs]
+2020-10-28T22:44:44.044-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 419M->418M(512M), 0.0017533 secs]
+2020-10-28T22:44:44.046-0800: [GC pause (G1 Evacuation Pause) (mixed)-- 419M->419M(512M), 0.0019130 secs]
+2020-10-28T22:44:44.048-0800: [Full GC (Allocation Failure)  419M->346M(512M), 0.0405186 secs]
+2020-10-28T22:44:44.088-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 346M->346M(512M), 0.0025254 secs]
+2020-10-28T22:44:44.091-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:44.091-0800: [GC concurrent-root-region-scan-end, 0.0000505 secs]
+2020-10-28T22:44:44.091-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:44.092-0800: [GC concurrent-mark-end, 0.0007877 secs]
+2020-10-28T22:44:44.092-0800: [GC remark, 0.0024764 secs]
+2020-10-28T22:44:44.094-0800: [GC cleanup 352M->352M(512M), 0.0006359 secs]
+2020-10-28T22:44:44.099-0800: [GC pause (G1 Evacuation Pause) (young) 374M->353M(512M), 0.0015633 secs]
+2020-10-28T22:44:44.101-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 356M->353M(512M), 0.0018575 secs]
+2020-10-28T22:44:44.103-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:44:44.103-0800: [GC concurrent-root-region-scan-end, 0.0000712 secs]
+2020-10-28T22:44:44.103-0800: [GC concurrent-mark-start]
+2020-10-28T22:44:44.104-0800: [GC concurrent-mark-end, 0.0008027 secs]
+2020-10-28T22:44:44.104-0800: [GC remark, 0.0014428 secs]
+2020-10-28T22:44:44.105-0800: [GC cleanup 361M->361M(512M), 0.0006581 secs]
+2020-10-28T22:44:44.109-0800: [GC pause (G1 Evacuation Pause) (young) 381M->359M(512M), 0.0022875 secs]
+执行结束!共生成对象次数:10189
+
+
+java -XX:+UseG1GC -Xms1g -Xmx1g -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:45:47.314-0800: [GC pause (G1 Evacuation Pause) (young) 57M->19M(1024M), 0.0067432 secs]
+2020-10-28T22:45:47.335-0800: [GC pause (G1 Evacuation Pause) (young) 70M->33M(1024M), 0.0059246 secs]
+2020-10-28T22:45:47.358-0800: [GC pause (G1 Evacuation Pause) (young) 93M->50M(1024M), 0.0065689 secs]
+2020-10-28T22:45:47.394-0800: [GC pause (G1 Evacuation Pause) (young) 141M->77M(1024M), 0.0101077 secs]
+2020-10-28T22:45:47.432-0800: [GC pause (G1 Evacuation Pause) (young) 186M->119M(1024M), 0.0109817 secs]
+2020-10-28T22:45:47.477-0800: [GC pause (G1 Evacuation Pause) (young) 262M->162M(1024M), 0.0118559 secs]
+2020-10-28T22:45:47.523-0800: [GC pause (G1 Evacuation Pause) (young) 332M->214M(1024M), 0.0176186 secs]
+2020-10-28T22:45:47.579-0800: [GC pause (G1 Evacuation Pause) (young) 412M->266M(1024M), 0.0169448 secs]
+2020-10-28T22:45:47.637-0800: [GC pause (G1 Evacuation Pause) (young) 491M->319M(1024M), 0.0192734 secs]
+2020-10-28T22:45:47.710-0800: [GC pause (G1 Evacuation Pause) (young) 596M->373M(1024M), 0.0237149 secs]
+2020-10-28T22:45:47.775-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 647M->431M(1024M), 0.0155515 secs]
+2020-10-28T22:45:47.790-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:45:47.790-0800: [GC concurrent-root-region-scan-end, 0.0001442 secs]
+2020-10-28T22:45:47.790-0800: [GC concurrent-mark-start]
+2020-10-28T22:45:47.793-0800: [GC concurrent-mark-end, 0.0025275 secs]
+2020-10-28T22:45:47.793-0800: [GC remark, 0.0010428 secs]
+2020-10-28T22:45:47.794-0800: [GC cleanup 450M->434M(1024M), 0.0008499 secs]
+2020-10-28T22:45:47.795-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:45:47.795-0800: [GC concurrent-cleanup-end, 0.0000445 secs]
+2020-10-28T22:45:47.890-0800: [GC pause (G1 Evacuation Pause) (young)-- 845M->627M(1024M), 0.0239691 secs]
+2020-10-28T22:45:47.915-0800: [GC pause (G1 Evacuation Pause) (mixed) 634M->542M(1024M), 0.0066432 secs]
+2020-10-28T22:45:47.930-0800: [GC pause (G1 Evacuation Pause) (mixed) 601M->549M(1024M), 0.0026694 secs]
+2020-10-28T22:45:47.932-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 550M->549M(1024M), 0.0012009 secs]
+2020-10-28T22:45:47.934-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:45:47.934-0800: [GC concurrent-root-region-scan-end, 0.0001617 secs]
+2020-10-28T22:45:47.934-0800: [GC concurrent-mark-start]
+2020-10-28T22:45:47.935-0800: [GC concurrent-mark-end, 0.0012456 secs]
+2020-10-28T22:45:47.935-0800: [GC remark, 0.0017693 secs]
+2020-10-28T22:45:47.937-0800: [GC cleanup 560M->542M(1024M), 0.0007530 secs]
+2020-10-28T22:45:47.938-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:45:47.938-0800: [GC concurrent-cleanup-end, 0.0000336 secs]
+2020-10-28T22:45:47.991-0800: [GC pause (G1 Evacuation Pause) (young) 845M->608M(1024M), 0.0144803 secs]
+2020-10-28T22:45:48.013-0800: [GC pause (G1 Evacuation Pause) (mixed) 634M->520M(1024M), 0.0065260 secs]
+2020-10-28T22:45:48.031-0800: [GC pause (G1 Evacuation Pause) (mixed) 574M->454M(1024M), 0.0067504 secs]
+2020-10-28T22:45:48.049-0800: [GC pause (G1 Evacuation Pause) (mixed) 508M->460M(1024M), 0.0046207 secs]
+2020-10-28T22:45:48.055-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 464M->463M(1024M), 0.0029956 secs]
+2020-10-28T22:45:48.058-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:45:48.058-0800: [GC concurrent-root-region-scan-end, 0.0001687 secs]
+2020-10-28T22:45:48.058-0800: [GC concurrent-mark-start]
+2020-10-28T22:45:48.061-0800: [GC concurrent-mark-end, 0.0031715 secs]
+2020-10-28T22:45:48.061-0800: [GC remark, 0.0020643 secs]
+2020-10-28T22:45:48.063-0800: [GC cleanup 473M->472M(1024M), 0.0007358 secs]
+2020-10-28T22:45:48.064-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:45:48.064-0800: [GC concurrent-cleanup-end, 0.0000168 secs]
+2020-10-28T22:45:48.118-0800: [GC pause (G1 Evacuation Pause) (young) 812M->545M(1024M), 0.0125231 secs]
+2020-10-28T22:45:48.135-0800: [GC pause (G1 Evacuation Pause) (mixed) 570M->475M(1024M), 0.0068647 secs]
+2020-10-28T22:45:48.152-0800: [GC pause (G1 Evacuation Pause) (mixed) 535M->476M(1024M), 0.0045825 secs]
+2020-10-28T22:45:48.157-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 477M->476M(1024M), 0.0020135 secs]
+2020-10-28T22:45:48.159-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:45:48.159-0800: [GC concurrent-root-region-scan-end, 0.0000899 secs]
+2020-10-28T22:45:48.159-0800: [GC concurrent-mark-start]
+2020-10-28T22:45:48.160-0800: [GC concurrent-mark-end, 0.0013675 secs]
+2020-10-28T22:45:48.160-0800: [GC remark, 0.0015444 secs]
+2020-10-28T22:45:48.162-0800: [GC cleanup 484M->482M(1024M), 0.0008040 secs]
+2020-10-28T22:45:48.163-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:45:48.163-0800: [GC concurrent-cleanup-end, 0.0000179 secs]
+2020-10-28T22:45:48.217-0800: [GC pause (G1 Evacuation Pause) (young) 832M->553M(1024M), 0.0090254 secs]
+2020-10-28T22:45:48.228-0800: [GC pause (G1 Evacuation Pause) (mixed) 571M->487M(1024M), 0.0080422 secs]
+2020-10-28T22:45:48.245-0800: [GC pause (G1 Evacuation Pause) (mixed) 541M->493M(1024M), 0.0030853 secs]
+2020-10-28T22:45:48.248-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 494M->492M(1024M), 0.0010916 secs]
+2020-10-28T22:45:48.249-0800: [GC concurrent-root-region-scan-start]
+2020-10-28T22:45:48.249-0800: [GC concurrent-root-region-scan-end, 0.0000805 secs]
+2020-10-28T22:45:48.249-0800: [GC concurrent-mark-start]
+2020-10-28T22:45:48.251-0800: [GC concurrent-mark-end, 0.0014974 secs]
+2020-10-28T22:45:48.251-0800: [GC remark, 0.0019188 secs]
+2020-10-28T22:45:48.253-0800: [GC cleanup 503M->502M(1024M), 0.0007553 secs]
+2020-10-28T22:45:48.254-0800: [GC concurrent-cleanup-start]
+2020-10-28T22:45:48.254-0800: [GC concurrent-cleanup-end, 0.0000116 secs]
+执行结束!共生成对象次数:13226
+
+java -XX:+UseG1GC -Xms4g -Xmx4g -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
+正在执行...
+2020-10-28T22:46:24.365-0800: [GC pause (G1 Evacuation Pause) (young) 204M->72M(4096M), 0.0229117 secs]
+2020-10-28T22:46:24.414-0800: [GC pause (G1 Evacuation Pause) (young) 250M->130M(4096M), 0.0233855 secs]
+2020-10-28T22:46:24.463-0800: [GC pause (G1 Evacuation Pause) (young) 308M->185M(4096M), 0.0197278 secs]
+2020-10-28T22:46:24.509-0800: [GC pause (G1 Evacuation Pause) (young) 363M->247M(4096M), 0.0216066 secs]
+2020-10-28T22:46:24.554-0800: [GC pause (G1 Evacuation Pause) (young) 425M->296M(4096M), 0.0198584 secs]
+2020-10-28T22:46:24.598-0800: [GC pause (G1 Evacuation Pause) (young) 474M->358M(4096M), 0.0234815 secs]
+2020-10-28T22:46:24.646-0800: [GC pause (G1 Evacuation Pause) (young) 536M->427M(4096M), 0.0243408 secs]
+2020-10-28T22:46:24.699-0800: [GC pause (G1 Evacuation Pause) (young) 611M->480M(4096M), 0.0171599 secs]
+2020-10-28T22:46:24.755-0800: [GC pause (G1 Evacuation Pause) (young) 716M->548M(4096M), 0.0288260 secs]
+2020-10-28T22:46:24.822-0800: [GC pause (G1 Evacuation Pause) (young) 800M->629M(4096M), 0.0264560 secs]
+2020-10-28T22:46:24.931-0800: [GC pause (G1 Evacuation Pause) (young) 1007M->734M(4096M), 0.0373344 secs]
+2020-10-28T22:46:25.022-0800: [GC pause (G1 Evacuation Pause) (young) 1130M->836M(4096M), 0.0436671 secs]
+执行结束!共生成对象次数:12965
+
+G1GC 的五个阶段：
+阶段 1: Initial Mark(初始标记)
+阶段 2: Root Region Scan(Root区扫描)
+阶段 3: Concurrent Mark(并发标记)
+阶段 4: Remark(再次标记)
+阶段 5: Cleanup(清理)
+
+G1GC适合堆内存较大的场景，堆内存8G以上，特别适合G1GC，堆内存4G到8G，也很建议并行GC 和 G1GC;
+
+
+
+
+
