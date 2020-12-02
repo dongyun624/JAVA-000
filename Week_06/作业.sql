@@ -1,5 +1,5 @@
 CREATE TABLE `user` (
-  `user_id` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `user_id` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `nick_name` varchar(50) NOT NULL COMMENT '昵称',
   `real_name` varchar(50) DEFAULT NULL COMMENT '真实姓名',
   `entry_password` varchar(200) NOT NULL COMMENT '加密密码',
@@ -20,7 +20,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 CREATE TABLE `product` (
-  `id` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `id` bigint(21) NOT NULL AUTO_INCREMENT COMMENT '产品id',
   `name` varchar(50) DEFAULT NULL COMMENT '商品名称',
   `price` decimal(11,6) NOT NULL COMMENT '商品价格',
   `product_desc` varchar(200) DEFAULT NULL COMMENT '商品描述',
