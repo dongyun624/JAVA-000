@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.partise.ecommerceorderservice.dao.ProductOrderMapper">
+    <resultMap id="BaseResultMap" type="com.partise.ecommerceorderservice.entity.ProductOrder">
+        <result column="order_id" jdbcType="INTEGER" property="orderId" />
+        <result column="product_id" jdbcType="INTEGER" property="productId" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="origin_price" jdbcType="DECIMAL" property="originPrice" />
+        <result column="purchase_price" jdbcType="DECIMAL" property="purchasePrice" />
+        <result column="order_msg" jdbcType="VARCHAR" property="orderMsg" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="error_msg" jdbcType="VARCHAR" property="errorMsg" />
+        <result column="business_date" jdbcType="VARCHAR" property="businessDate" />
+        <result column="ctime" jdbcType="BIGINT" property="ctime" />
+        <result column="utime" jdbcType="BIGINT" property="utime" />
+    </resultMap>
+
+
+
+    <sql id="Base_Column_List">
+        order_id, product_id, user_id, origin_price, purchase_price, order_msg, status,
+        error_msg, business_date, ctime, utime
+    </sql>
+
+    <insert id="insert" parameterType="com.partise.ecommerceorderservice.entity.ProductOrder">
+        insert into product_order
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productId != null">
+                product_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="originPrice != null">
+                origin_price,
+            </if>
+            <if test="purchasePrice != null">
+                purchase_price,
+            </if>
+            <if test="orderMsg != null">
+                order_msg,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="errorMsg != null">
+                error_msg,
+            </if>
+            <if test="businessDate != null">
+                business_date,
+            </if>
+            <if test="ctime != null">
+                ctime,
+            </if>
+            <if test="utime != null">
+                utime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productId != null">
+                #{productId,jdbcType=BIGINT},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="originPrice != null">
+                #{originPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="purchasePrice != null">
+                #{purchasePrice,jdbcType=DECIMAL},
+            </if>
+            <if test="orderMsg != null">
+                #{orderMsg,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="errorMsg != null">
+                #{errorMsg,jdbcType=VARCHAR},
+            </if>
+            <if test="businessDate != null">
+                #{businessDate,jdbcType=VARCHAR},
+            </if>
+            <if test="ctime != null">
+                #{ctime,jdbcType=BIGINT},
+            </if>
+            <if test="utime != null">
+                #{utime,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="getProductOrder" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from product_order
+        where
+        order_id = #{orderId,jdbcType=INTEGER}
+    </select>
+
+  <select id="getProductOrderListByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from product_order
+    where
+      user_id = #{userId,jdbcType=BIGINT}
+  </select>
+
+</mapper>
