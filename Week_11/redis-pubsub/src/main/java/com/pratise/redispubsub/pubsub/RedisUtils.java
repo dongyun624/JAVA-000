@@ -32,6 +32,7 @@ public class RedisUtils {
         jedisPool.getResource().subscribe(new JedisPubSub() {
             @Override
             public void onMessage(String channel, String message) {
+                System.out.println("subscribe: " + message);
                 super.onMessage(channel, message);
             }
         }, channel);
