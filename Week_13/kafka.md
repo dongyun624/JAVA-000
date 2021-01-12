@@ -43,9 +43,9 @@ cp config/server.properties kafka9001.properties
 cp config/server.properties kafka9001.properties
 
 2、更改配置文件   
-vi kafka9001.properties, 设置 broker.id=1, log.dirs=/tmp/kafka-logs1, listeners=PLAINTEXT://localhost:9001   
-vi kafka9002.properties, 设置 broker.id=2, log.dirs=/tmp/kafka-logs2, listeners=PLAINTEXT://localhost:9002   
-vi kafka9003.properties, 设置 broker.id=3, log.dirs=/tmp/kafka-logs3, listeners=PLAINTEXT://localhost:9003   
+vi kafka9001.properties, 设置 broker.id=1, log.dirs=/tmp/kafka-logs1, listeners=PLAINTEXT://localhost:9001,broker.list=localhost:9001,localhost:9002,localhost:9003,zookeeper.connect=localhost:2181   
+vi kafka9002.properties, 设置 broker.id=2, log.dirs=/tmp/kafka-logs2, listeners=PLAINTEXT://localhost:9002,broker.list=localhost:9001,localhost:9002,localhost:9003,zookeeper.connect=localhost:2181   
+vi kafka9003.properties, 设置 broker.id=3, log.dirs=/tmp/kafka-logs3, listeners=PLAINTEXT://localhost:9003,broker.list=localhost:9001,localhost:9002,localhost:9003,zookeeper.connect=localhost:2181   
 
 3、清理掉zk上的所有数据   
 可以删除zk的本地文件或者用ZooInspector操作:   
@@ -94,5 +94,3 @@ start.time, end.time, data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.s
 2021-01-12 20:43:13:810, 2021-01-12 20:43:15:216, 954.0329, 678.5440, 1000378, 711506.4011, 1610455394096, -1610455392690, -0.0000, -0.0006
 
 结论：集群情况下，单节点性能不能单个kafka实例。整体性能基本一致
-
-
