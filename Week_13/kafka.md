@@ -93,4 +93,4 @@ WARNING: option [threads] and [num-fetch-threads] have been deprecated and will 
 start.time, end.time, data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec, rebalance.time.ms, fetch.time.ms, fetch.MB.sec, fetch.nMsg.sec
 2021-01-12 20:43:13:810, 2021-01-12 20:43:15:216, 954.0329, 678.5440, 1000378, 711506.4011, 1610455394096, -1610455392690, -0.0000, -0.0006
 
-结论：集群情况下，单节点性能不能单个kafka实例。整体性能基本一致
+结论：集群情况下，单节点性能不能单个kafka实例。原因：单机开集群线程上下文切换有开销
